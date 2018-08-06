@@ -58,6 +58,7 @@ $(document).ready(function() {
             });
         })
 
+<<<<<<< HEAD
         // $('.button-all-category').on('click', function (e) {
         //     e.preventDefault();
         //     if (thisParents.hasClass('active')) {
@@ -68,6 +69,20 @@ $(document).ready(function() {
         //         thisParents.addClass('active');
         //     }
         // });
+=======
+        $('.button-all-category').on('click', function (e) {
+            var parentOfButton = $(this).parents('.cards__item');
+            var heightCardsWrapper = parentOfButton.find('.cards__wrapper').outerHeight();
+            e.preventDefault();
+            if (parentOfButton.hasClass('active')) {
+                parentOfButton.css('height','auto');
+                parentOfButton.removeClass('active');
+            } else {
+                parentOfButton.css('height',heightCardsWrapper);
+                parentOfButton.addClass('active');
+            }
+        });
+>>>>>>> fb81a02db022722419e29bf678767ef7ead5d2a4
     })();
     (function addViewportAnimation() {
         $('.souvenir').viewportChecker({
