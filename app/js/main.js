@@ -792,3 +792,27 @@ window.onload = function() {
         $('body').css('overflow', 'auto');
     }, 300);
 };
+
+// adaptive
+
+// activate breakpoints
+
+function media(mediaQueryString, action){
+   var handleMatchMedia = function (mediaQuery) {
+       if (mediaQuery.matches) { //Попадает в запроc
+           if (action  && typeof(action) === "function") action();
+       } 
+   };
+   var mql = window.matchMedia(mediaQueryString); //стандартный медиазапрос для смены режима просмотра
+   handleMatchMedia(mql);
+   mql.addListener(handleMatchMedia);
+}
+
+media('all and (max-width: 767px)', function(){
+    $('.cards').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        arrows: false
+    });
+});
