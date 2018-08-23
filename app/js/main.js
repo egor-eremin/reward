@@ -821,6 +821,7 @@ media('all and (max-width: 767px)', function(){
         $(".cards").mCustomScrollbar({
           axis:"x",
           theme:"rounded-dark",
+          contentTouchScroll: 25,
           advanced:{
             autoExpandHorizontalScroll:true
           },
@@ -834,6 +835,7 @@ media('all and (max-width: 767px)', function(){
 
 $(document).foundation();
 
+$('.menu-adaptive__wrap').hide();
 $('.header-info__wrapper .catalog-burger').click(function(){
-    $('.menu-adaptive__wrap').toggleClass('display-menu');
+    $('.menu-adaptive__wrap').slideToggle();
 });

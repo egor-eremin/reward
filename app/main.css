@@ -4793,6 +4793,10 @@ page-404__title::after {
 }
 
 .menu-adaptive__wrap {
+    /*display: none;*/
+}
+
+.search-toggle {
     display: none;
 }
 
@@ -4805,7 +4809,7 @@ page-404__title::after {
         display: none;
     }
 
-    .search--round {
+    .search-toggle {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -4815,10 +4819,12 @@ page-404__title::after {
         background: #fff;
     }
 
-    .search--round svg {
+    .search-toggle svg {
         height: 15px;
         width: 15px;
     }
+
+    /*header panel*/
 
     .header-info__wrapper {
         display: flex;
@@ -4836,7 +4842,15 @@ page-404__title::after {
     .basket {
         -ms-align-items: flex-end;
         align-items: flex-end;
+        width: auto;
+        margin-left: 0;
     }
+
+    .basket__icon {
+        background: #fff;
+    }
+
+
 
     .search__help {
         display: none;
