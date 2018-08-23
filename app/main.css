@@ -4865,9 +4865,14 @@ page-404__title::after {
 
     /*cards*/
 
-    .cards__wrapper {
+    .cards__container {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .cards__container .h2-title {
+        margin-right: 10px;
+        margin-left: 10px;
     }
     
     .cards {
@@ -4881,7 +4886,10 @@ page-404__title::after {
     }
 
     .cards .mCSB_container{
-      display: -webkit-flex; display: flex;
+      display: -webkit-flex;
+      display: flex;
+      margin-right: 10px;
+      margin-left: 10px;
     }    
 
     .cards__item {
@@ -4904,7 +4912,10 @@ page-404__title::after {
         border: 5px solid #303030;
         margin: 0 !important;
     }
-
+    
+    .cards .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+        margin: 0 10px;
+    }
     .cards .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
         margin: 5px 0;
         height: 6px;

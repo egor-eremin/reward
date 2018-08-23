@@ -815,7 +815,7 @@ function media(mediaQueryString, action){
    mql.addListener(handleMatchMedia);
 }
 
-media('all and (min-width: 767px)', function(){
+media('all and (max-width: 767px)', function(){
     (function($){
       $(window).on("load",function(){
         $(".cards").mCustomScrollbar({
