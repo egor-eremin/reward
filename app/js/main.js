@@ -815,11 +815,17 @@ function media(mediaQueryString, action){
    mql.addListener(handleMatchMedia);
 }
 
-media('all and (max-width: 767px)', function(){
-    $('.cards').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: true,
-        arrows: false
-    });
+media('all and (min-width: 767px)', function(){
+    (function($){
+      $(window).on("load",function(){
+        $(".cards").mCustomScrollbar({
+          axis:"x",
+          theme:"rounded-dark",
+          advanced:{
+            autoExpandHorizontalScroll:true
+          },
+          mouseWheel:{ enable: false}
+        });
+      });
+    })(jQuery);
 });
