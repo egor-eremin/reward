@@ -4792,10 +4792,22 @@ page-404__title::after {
     }
 }
 
+.menu-adaptive__wrap {
+    display: none;
+}
+
 /*adaptive*/
 
 @media (max-width: 767px) {
     /*drilldown menu*/
+    .header-info,
+    .menu-catalog {
+        display: none;
+    }
+    
+    .menu-adaptive__wrap {
+        display: block;
+    }
     .menu-adaptive {
         background: #0078ab;
     }
@@ -4808,6 +4820,20 @@ page-404__title::after {
 
     .submenu-adaptive li a {
         color: #000;
+    }
+
+    .js-drilldown-back a {
+        background: #0078ab !important;
+        color: #fff !important;
+    }
+
+    /*main-nav adaptive*/
+    .main-nav__adaptive {
+        background: #f5f6fa;
+    }
+    
+    .main-nav__adaptive li a {
+        padding: .7rem 1rem;
     }
 
     /*header*/
