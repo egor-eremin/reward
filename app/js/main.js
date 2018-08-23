@@ -833,3 +833,7 @@ media('all and (max-width: 767px)', function(){
 // drilldown menu
 
 $(document).foundation();
+
+$('.header-info__wrapper .catalog-burger').click(function(){
+    $('.menu-adaptive__wrap').toggleClass('display-menu');
+});
