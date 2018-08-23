@@ -4795,6 +4795,20 @@ page-404__title::after {
 /*adaptive*/
 
 @media (max-width: 767px) {
+    /*drilldown menu*/
+    .menu-adaptive {
+        background: #0078ab;
+    }
+
+    .menu-adaptive li a {
+        display: block;
+        background: inherit;
+        color: #fff;
+    }
+
+    .submenu-adaptive li a {
+        color: #000;
+    }
 
     /*header*/
 

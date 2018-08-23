@@ -829,3 +829,7 @@ media('all and (max-width: 767px)', function(){
       });
     })(jQuery);
 });
+
+// drilldown menu
+
+$(document).foundation();
