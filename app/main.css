@@ -4880,8 +4880,29 @@ page-404__title::after {
     }
 
     .drilldown .is-drilldown-submenu-parent>a::after {
-        background: url("../images/example-prev.svg");
+        background: url(../images/arrow-right-white.svg) no-repeat cadetblue;
+        width: 11px;
+        height: 15px;
+        background-color: transparent;
+        border: none; 
+        /* border-right-width: 0; */
+        /* border-left-style: solid; */
+        /* border-color: transparent transparent transparent #2ba6cb; */
     }
+
+    .drilldown .js-drilldown-back>a::before {
+        background: url(../images/arrow-right-white.svg) no-repeat;
+        width: 11px;
+        height: 15px;
+        transform: rotate(180deg);
+        border: none;
+    }
+
+    .submenu-adaptive > li.is-drilldown-submenu-parent > a::after {
+        background: url(../images/pagination-right.svg) no-repeat !important;
+    }
+
+
 
     .submenu-adaptive li a {
         color: #000;
