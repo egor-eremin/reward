@@ -4812,29 +4812,19 @@ page-404__title::after {
 
     .search {
         display: none;
+        width: 80%;
         position: absolute;
         z-index: 3;
     }
 
     .search__input {
+        padding: 10px 15px;
         border-radius: 30px;
+        border: none;
+        font-size: 1rem;
     }
 
-    .search__input::-webkit-input-placeholder {
-       color:transparent;
-    }
 
-    .search__input:-moz-placeholder { /* Firefox 18- */
-       color:transparent; 
-    }
-
-    .search__input::-moz-placeholder {  /* Firefox 19+ */
-       color:transparent; 
-    }
-
-    .search__input:-ms-input-placeholder {  
-       color:transparent;
-    }
 
     .search__button svg {
         display: none;
@@ -4882,15 +4872,36 @@ page-404__title::after {
         padding: 15px;
     }
 
+    /*forms*/
+
+    /*.form-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }*/
+
+    /*basket*/
+
     .basket {
-        -ms-align-items: flex-end;
-        align-items: flex-end;
+        align-items: center;
         width: auto;
         margin-left: 0;
     }
 
     .basket__icon {
         background: #fff;
+        width: 25px;
+        height: 25px;
+    }
+
+    .basket__icon svg {
+        height: 16px;
+        width: 18px;
+    }
+
+    .basket__quantity {
+        height: 16px;
+        width: 16px;
     }
 
     .display-menu {
