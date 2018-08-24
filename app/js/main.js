@@ -839,3 +839,18 @@ $('.menu-adaptive__wrap').hide();
 $('.header-info__wrapper .catalog-burger').click(function(){
     $('.menu-adaptive__wrap').slideToggle();
 });
+
+
+// custom text for back link
+
+$('.nav-back').each(function(){
+  var backTxt = $(this).parent().closest('.is-drilldown-submenu-parent').find('> a').text();
+  $(this).text(backTxt);
+});
+
+// toggle search
+
+$('.search-toggle').click(function(){
+    $(this).toggleClass('search-toggle--close')
+    $('.search').toggle();
+});
