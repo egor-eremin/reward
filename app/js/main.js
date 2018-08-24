@@ -815,21 +815,23 @@ function media(mediaQueryString, action){
    mql.addListener(handleMatchMedia);
 }
 
-media('all and (max-width: 767px)', function(){
-    (function($){
-      $(window).on("load",function(){
-        $(".cards").mCustomScrollbar({
-          axis:"x",
-          theme:"rounded-dark",
-          contentTouchScroll: 25,
-          advanced:{
-            autoExpandHorizontalScroll:true
-          },
-          mouseWheel:{ enable: false}
-        });
-      });
-    })(jQuery);
-});
+// custom scrollbar on cards
+
+// media('all and (max-width: 767px)', function(){
+//     (function($){
+//       $(window).on("load",function(){
+//         $(".cards").mCustomScrollbar({
+//           axis:"x",
+//           theme:"rounded-dark",
+//           contentTouchScroll: 25,
+//           advanced:{
+//             autoExpandHorizontalScroll:true
+//           },
+//           mouseWheel:{ enable: false}
+//         });
+//       });
+//     })(jQuery);
+// });
 
 // drilldown menu
 
