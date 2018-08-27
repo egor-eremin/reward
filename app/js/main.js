@@ -88,6 +88,7 @@ $(document).ready(function() {
             classToAdd: 'animation-cup',
         });
     })();
+
     (function initNewsSlider() {
         $('#init-news-slider').on('init', function(event, slick){
             var countSlide = $('.news-slider .slick-dots li:last-child button').text();
@@ -126,6 +127,12 @@ $(document).ready(function() {
             '<?xpacket end="w"?></metadata>\n' +
             '  <path fill="#404040" id="Фигура_24" data-name="Фигура 24" class="cls-1" d="M1521,4464.87h30.7l-5.61,5.13h2.44l6.47-6-6.47-6h-2.44l5.61,5.13H1521v1.74Z" transform="translate(-1521 -4458)"/>\n' +
             '</svg></button>',
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: "unslick"
+                }
+            ]
         });
         $('.news-slider .slick-arrow').wrapAll('<div class="news-button-wrapper"></div>');
         $('.news-slide-number').appendTo('.news-button-wrapper');
@@ -792,3 +799,60 @@ window.onload = function() {
         $('body').css('overflow', 'auto');
     }, 300);
 };
+
+// adaptive
+
+// activate breakpoints
+
+function media(mediaQueryString, action){
+   var handleMatchMedia = function (mediaQuery) {
+       if (mediaQuery.matches) { //Попадает в запроc
+           if (action  && typeof(action) === "function") action();
+       } 
+   };
+   var mql = window.matchMedia(mediaQueryString); //стандартный медиазапрос для смены режима просмотра
+   handleMatchMedia(mql);
+   mql.addListener(handleMatchMedia);
+}
+
+// custom scrollbar on cards
+
+// media('all and (max-width: 767px)', function(){
+//     (function($){
+//       $(window).on("load",function(){
+//         $(".cards").mCustomScrollbar({
+//           axis:"x",
+//           theme:"rounded-dark",
+//           contentTouchScroll: 25,
+//           advanced:{
+//             autoExpandHorizontalScroll:true
+//           },
+//           mouseWheel:{ enable: false}
+//         });
+//       });
+//     })(jQuery);
+// });
+
+// drilldown menu
+
+$(document).foundation();
+
+$('.menu-adaptive__wrap').hide();
+$('.header-info__wrapper .catalog-burger').click(function(){
+    $('.menu-adaptive__wrap').slideToggle();
+});
+
+
+// custom text for back link
+
+$('.nav-back').each(function(){
+  var backTxt = $(this).parent().closest('.is-drilldown-submenu-parent').find('> a').text();
+  $(this).text(backTxt);
+});
+
+// toggle search
+
+$('.search-toggle').click(function(){
+    $(this).toggleClass('search-toggle--close')
+    $('.search').toggle();
+});
