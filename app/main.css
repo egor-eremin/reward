@@ -1386,12 +1386,9 @@ svg {
     margin-top: 4px;
 }
 
-<<<<<<< HEAD
-=======
 .cards__wrapper:hover .cards__category-items::before {
     background-color: #ffdd55;
 }
->>>>>>> fb81a02db022722419e29bf678767ef7ead5d2a4
 .cards__category-item:not(:first-child):not(:nth-child(2)) {
     display: none;
 }

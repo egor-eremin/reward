@@ -234,7 +234,7 @@ $(document).ready(function() {
                 },
                 format: wNumb({
                     decimals: 0,
-                    thousand: ' ',
+                    // thousand: ' ',
                 })
             });
 
@@ -259,7 +259,7 @@ $(document).ready(function() {
         }
     })();
     (function addMaskForIntervalRange() {
-        $('.input-interval').mask('# ##0', {reverse: true});
+        $('.input-interval').mask('###0', {reverse: true});
     })();
     (function initCustomSelect() {
         CustomSelect('#filter-select', 'Все', '.filter-select-wrapper');
