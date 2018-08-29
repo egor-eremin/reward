@@ -839,7 +839,7 @@ $(document).foundation();
 
 $('.menu-adaptive__wrap').hide();
 $('.header-info__wrapper .catalog-burger').click(function(){
-    $('.menu-adaptive__wrap').slideToggle();
+    $('.menu-adaptive__wrap').slideToggle(750);
 });
 
 
