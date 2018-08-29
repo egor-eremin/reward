@@ -45,18 +45,20 @@ $(document).ready(function() {
         });
     })();
     (function fixedHeightOnCategoryCard() {
-        $('.cards__wrapper').each(function (i, e) {
-            var thisHeight = $(this).outerHeight();
-            var thisParents = $(this).parents('.cards__item');
+        if (window.matchMedia("(min-width: 1025px)").matches) {
+            $('.cards__wrapper').each(function (i, e) {
+                var thisHeight = $(this).outerHeight();
+                var thisParents = $(this).parents('.cards__item');
 
-            $(this).mouseover(function () {
-                thisParents.css('height',thisHeight);
-            });
+                $(this).mouseover(function () {
+                  thisParents.css('height',thisHeight);
+                });
 
-            $(this).mouseout(function () {
-                thisParents.css('height','auto');
-            });
-        })
+                $(this).mouseout(function () {
+                  thisParents.css('height','auto');
+                });
+            })
+        }
 
 
         // $('.button-all-category').on('click', function (e) {
