@@ -5222,6 +5222,10 @@ page-404__title::after {
         display: block;
     }
 
+    .cards__category-items {
+      display: none;
+    }
+
     .cards .mCSB_dragger .mCSB_dragger_bar {
         height: 16px !important;
         width: 16px !important;
