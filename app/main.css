@@ -5081,7 +5081,8 @@ page-404__title::after {
     .button_enter {
         background: #ffdd55;
         width: auto;
-        padding: 0.875rem 10px 0.875rem 39px;
+        padding: 0.804rem 9px 0.804rem 38px;
+        border: 1px solid #ffdd55;
     }
 
     .header-information__contacts {
