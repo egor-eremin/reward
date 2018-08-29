@@ -854,5 +854,8 @@ $('.nav-back').each(function(){
 
 $('.search-toggle').click(function(){
     $(this).toggleClass('search-toggle--close')
-    $('.search').toggle();
+    // $('.search').toggle();
+    $('.search').animate({
+      width: "toggle"
+    }, 1000)
 });
