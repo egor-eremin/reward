@@ -4881,8 +4881,8 @@ page-404__title::after {
                 align-items: center;
         -ms-flex-pack: distribute;
             justify-content: space-around;
-        width: 25px;
-        height: 25px;
+        width: 39px;
+        height: 39px;
         border-radius: 50%;
         background: #fff center no-repeat;
         background-image: url(../images/search.svg);
@@ -4979,8 +4979,8 @@ page-404__title::after {
 
     .basket__icon {
         background: #fff;
-        width: 25px;
-        height: 25px;
+        width: 39px;
+        height: 39px;
     }
 
     .basket__icon svg {
