@@ -4946,7 +4946,8 @@ page-404__title::after {
             -ms-flex-align: center;
                 align-items: center;
         width: auto;
-        margin-left: -7rem;
+        margin-left: 0;
+        margin-right: auto;
     }
 
     .basket__icon {
