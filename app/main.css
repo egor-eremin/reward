@@ -5029,6 +5029,10 @@ page-404__title::after {
     .main-nav__adaptive-icon {
         display: inline-block;
         width: 40px;
+        text-align: center;
+        -webkit-transform: translateX(-7px);
+        -ms-transform: translateX(-7px);
+        transform: translateX(-7px);
     }
 
     /*main-nav adaptive*/
