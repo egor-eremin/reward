@@ -4886,11 +4886,38 @@ page-404__title::after {
         border-radius: 50%;
         background: #fff center no-repeat;
         background-image: url(../images/search.svg);
-        background-size: 70%;
+        background-size: 50%;
+        cursor: pointer;
+    }
+
+    .search-toggle:not(.search-toggle--close) .search-toggle__cross-icon {
+      display: none;
+    }
+
+    .search-toggle__cross-icon {
+      display: inline-block;
+      position: relative;
+      width: 16px;
+      height: 2px;
+      background-color: #000;
+      transform: rotate(45deg);
+    }
+
+    .search-toggle__cross-icon::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 7px;
+      width: 2px;
+      height: 16px;
+      background-color: #000;
+      top: -7px;
     }
 
     .search-toggle--close {
-        background-image: url(../images/close.svg);
+        /* background-image: url(../images/close.svg); */
+        background-image: none;
+        background-size: 33%;
     }
 
     .search-toggle svg {
