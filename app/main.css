@@ -5208,7 +5208,7 @@ page-404__title::after {
     }
 
     .cards__item {
-        width: 80%;
+        width: 226px;
         -webkit-box-flex: 0;
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
