@@ -5551,7 +5551,7 @@ page-404__title::after {
         margin-bottom: 87px;
     }
 
-    .news-slider__item:nth-child(2) {
+    .news-slider__item:first-of-type {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

@@ -131,7 +131,7 @@ $(document).ready(function() {
             '</svg></button>',
             responsive: [
                 {
-                    breakpoint: 767,
+                    breakpoint: 1024,
                     settings: "unslick"
                 }
             ]
