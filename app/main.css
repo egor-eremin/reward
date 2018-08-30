@@ -5118,6 +5118,8 @@ page-404__title::after {
     .main-nav__adaptive li a {
         padding: 1.25rem 1rem;
         line-height: 1;
+        width: 100%;
+        cursor: pointer;
     }
 
     /*header*/
