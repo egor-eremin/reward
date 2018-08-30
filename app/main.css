@@ -5336,6 +5336,7 @@ page-404__title::after {
         font-size: 1.143rem;
         margin: 0 -2px 28px;
         letter-spacing: -0.3px;
+        padding-right: 60px;
     }
     .mission::before {
         right: -5px;
