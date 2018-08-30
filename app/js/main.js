@@ -752,7 +752,7 @@ $(document).ready(function() {
             });
         }
     };
-    function initYMap(){     
+    function initYMap(){
         let myMap, myPlacemark;
         function renderMap() {
             let elem = document.querySelector('.active');
@@ -760,8 +760,8 @@ $(document).ready(function() {
                 center: elem.dataset.map.split(','),
                 zoom: 16
             });
-            myPlacemark = new ymaps.Placemark(elem.dataset.marker.split(','), { 
-                hintContent: 'Награда центр', 
+            myPlacemark = new ymaps.Placemark(elem.dataset.marker.split(','), {
+                hintContent: 'Награда центр',
                 balloonContent: 'Получи награду, которую ты заслужил.'
             }, {
                 // Опции.
@@ -778,7 +778,7 @@ $(document).ready(function() {
             myMap.geoObjects.add(myPlacemark);
         };
         renderMap();
-        $('.map__button>button').map(function (i, item, arr) 
+        $('.map__button>button').map(function (i, item, arr)
         {
             item.addEventListener('click', function() {
                 $('.map__button>button').map(function (ind, it) {
@@ -810,7 +810,7 @@ function media(mediaQueryString, action){
    var handleMatchMedia = function (mediaQuery) {
        if (mediaQuery.matches) { //Попадает в запроc
            if (action  && typeof(action) === "function") action();
-       } 
+       }
    };
    var mql = window.matchMedia(mediaQueryString); //стандартный медиазапрос для смены режима просмотра
    handleMatchMedia(mql);
@@ -855,9 +855,11 @@ $('.nav-back').each(function(){
 // toggle search
 
 $('.search-toggle').click(function(){
+    $('.search').toggleClass('search_active')
     $(this).toggleClass('search-toggle--close')
-    // $('.search').toggle();
-    $('.search').animate({
-      width: "toggle"
-    }, 1000)
 });
+
+$('.search__input').on('focus', function () {
+    $(this).closest('.search').addClass('search_active')
+    $('.search-toggle').addClass('search-toggle--close')
+})

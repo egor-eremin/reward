@@ -4861,23 +4861,55 @@ page-404__title::after {
     /*search*/
 
     .search {
-        display: none;
-        width: calc(80% - 32px);
-        position: absolute;
-        top: 20%;
-        right: 32px;
-        padding: 1px 0;
+        /* display: none; */
+        display: inline-flex;
+        position: relative;
+        top: 0;
+        right: 0;
+        padding: 0;
+        padding-left: 15px;
         z-index: 3;
+        align-self: flex-start;
+    }
+
+    .search-toggle {
+      position: absolute;
+    }
+
+    .search__form {
+      margin-left: auto;
+      position: static;
+      display: block;
+      width: 100%;
+      max-width: none;
+      overflow: visible;
     }
 
     .search__input {
         padding: 10px 15px;
-        border-radius: 30px 0 0 30px;
+        border-radius: 30px;
         border: none;
         font-size: 1rem;
+        width: 39px;
+        float: right;
+        -webkit-transition: width .5s ease-out;
+        -o-transition: width .5s ease-out;
+        transition: width .5s ease-out;
     }
 
+    .search__input:not(:focus),
+    .search:not(.search_active) .search__input {
+      padding-right: 20px;
+    }
 
+    .search__input:focus,
+    .search_active .search__input {
+        width: calc(100% + 90px);
+    }
+
+    .search__label {
+      visibility: hidden;
+    }
 
     .search__button svg {
         display: none;
@@ -5048,6 +5080,7 @@ page-404__title::after {
         background: inherit;
         color: #fff;
         padding: 1rem 1.5714rem;
+        cursor: pointer;
     }
 
     .drilldown .is-drilldown-submenu-parent>a::after {
@@ -5080,6 +5113,15 @@ page-404__title::after {
 
     .submenu-adaptive li a {
         color: #000;
+    }
+
+    .submenu-adaptive .is-submenu-item > a {
+      line-height: 2.76em;
+    }
+
+    .drilldown .submenu-adaptive.is-drilldown-submenu a {
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     .js-drilldown-back a {
@@ -5115,6 +5157,8 @@ page-404__title::after {
     .main-nav__adaptive li a {
         padding: 1.25rem 1rem;
         line-height: 1;
+        width: 100%;
+        cursor: pointer;
     }
 
     /*header*/
@@ -5245,7 +5289,8 @@ page-404__title::after {
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
         overflow-x: auto;
-        padding-left: 10px;
+        padding: 0;
+        margin: 0;
     }
 
     .cards::-webkit-scrollbar {
@@ -5329,6 +5374,7 @@ page-404__title::after {
         font-size: 1.143rem;
         margin: 0 -2px 28px;
         letter-spacing: -0.3px;
+        padding-right: 60px;
     }
     .mission::before {
         right: -5px;
@@ -5424,7 +5470,6 @@ page-404__title::after {
     }
 
     .conditions__block_yellow {
-        min-height: 500px;
         padding: 1.37rem 1.5rem;
         background-position: right 7px bottom 10px;
     }
@@ -5623,5 +5668,4 @@ page-404__title::after {
     .section {
       padding-top: 4.1rem;
     }
-
 }
