@@ -4865,7 +4865,7 @@ page-404__title::after {
 
     .search {
         display: none;
-        width: calc(80% - 32px);
+        width: calc(100% - 155px);
         position: absolute;
         top: 8px;
         right: 32px;
