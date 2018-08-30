@@ -5093,6 +5093,9 @@ page-404__title::after {
         background-color: transparent;
         border: none;
         right: 1.5714rem;
+        -webkit-transform: translateY(-10%);
+        -ms-transform: translateY(-10%);
+        transform: translateY(-10%);
         /* border-right-width: 0; */
         /* border-left-style: solid; */
         /* border-color: transparent transparent transparent #2ba6cb; */
@@ -5106,6 +5109,7 @@ page-404__title::after {
             -ms-transform: rotate(180deg);
                 transform: rotate(180deg);
         border: none;
+        vertical-align: -0.15em;
     }
 
     .submenu-adaptive > li.is-drilldown-submenu-parent > a::after {
