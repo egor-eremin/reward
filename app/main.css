@@ -5251,7 +5251,8 @@ page-404__title::after {
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
         overflow-x: auto;
-        padding-left: 10px;
+        padding: 0;
+        margin: 0;
     }
 
     .cards::-webkit-scrollbar {
