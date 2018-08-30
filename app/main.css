@@ -5432,7 +5432,6 @@ page-404__title::after {
     }
 
     .conditions__block_yellow {
-        min-height: 500px;
         padding: 1.37rem 1.5rem;
         background-position: right 7px bottom 10px;
     }
