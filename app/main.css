@@ -5086,6 +5086,15 @@ page-404__title::after {
         color: #000;
     }
 
+    .submenu-adaptive .is-submenu-item > a {
+      line-height: 2.76em;
+    }
+
+    .drilldown .submenu-adaptive.is-drilldown-submenu a {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     .js-drilldown-back a {
         background: #0078ab !important;
         color: #fff !important;
