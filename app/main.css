@@ -4867,7 +4867,7 @@ page-404__title::after {
         display: none;
         width: calc(80% - 32px);
         position: absolute;
-        top: 20%;
+        top: 8px;
         right: 32px;
         padding: 1px 0;
         z-index: 3;
@@ -5051,6 +5051,7 @@ page-404__title::after {
         background: inherit;
         color: #fff;
         padding: 1rem 1.5714rem;
+        cursor: pointer;
     }
 
     .drilldown .is-drilldown-submenu-parent>a::after {
@@ -5628,5 +5629,4 @@ page-404__title::after {
     .section {
       padding-top: 4.1rem;
     }
-
 }
