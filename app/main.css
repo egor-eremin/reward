@@ -984,20 +984,19 @@ svg {
     flex-direction: column;
     margin-top: -2px;
     margin-right: 23px;
-    cursor: pointer;
 }
 .catalog-burger__line {
-    width: 34px;
-    height: 5px;
+    width: 21px;
+    height: 3px;
     border-radius: 10px;
     background-color: #303030;
     transition: .3s ease-in-out;
 }
 .catalog-burger__line + .catalog-burger__line {
-    margin-top: 5px;
+    margin-top: 3px;
 }
 .catalog-burger__line:nth-child(2) {
-    width: 21px;
+    width: 13px;
 }
 .menu-catalog_button:hover .catalog-burger__line:nth-child(2) {
     width: 21px;
@@ -4821,7 +4820,17 @@ page-404__title::after {
 /*adaptive*/
 
 @media (max-width: 1024px) {
-    /* address bar */
+    .catalog-burger__line {
+        width: 34px;
+        height: 5px;
+    }
+    .catalog-burger__line:nth-child(2) {
+        width: 21px;
+    }
+    .menu-catalog_button:hover .catalog-burger__line:nth-child(2) {
+        width: 21px;
+    }
+    /* addre: ;ss bar */
     .address a {
       font-size: .85714rem;
     }
