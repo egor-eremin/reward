@@ -835,6 +835,18 @@ function media(mediaQueryString, action){
 //     })(jQuery);
 // });
 
+
+// toggle search
+$('.search-toggle').click(function(){
+    $('.search').toggleClass('search_active')
+    $(this).toggleClass('search-toggle--close')
+});
+
+$('.search__input').on('focus', function () {
+    $(this).closest('.search').addClass('search_active')
+    $('.search-toggle').addClass('search-toggle--close')
+})
+
 // drilldown menu
 
 $(document).foundation();
@@ -851,15 +863,3 @@ $('.nav-back').each(function(){
   var backTxt = $(this).parent().closest('.is-drilldown-submenu-parent').find('> a').text();
   $(this).text(backTxt);
 });
-
-// toggle search
-
-$('.search-toggle').click(function(){
-    $('.search').toggleClass('search_active')
-    $(this).toggleClass('search-toggle--close')
-});
-
-$('.search__input').on('focus', function () {
-    $(this).closest('.search').addClass('search_active')
-    $('.search-toggle').addClass('search-toggle--close')
-})

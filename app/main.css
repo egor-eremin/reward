@@ -4817,7 +4817,17 @@ page-404__title::after {
     display: none;
 }
 
+.catalog__heading {
+  padding: 0 10px;
+}
+
 /*adaptive*/
+
+@media (min-width: 768px) {
+  .catalog__heading {
+    display: none;
+  }
+}
 
 @media (max-width: 1024px) {
     .catalog-burger__line {
@@ -5583,7 +5593,7 @@ page-404__title::after {
                 transform: rotateY(0deg);
     }
 
-    .section.news {
+    .news {
       padding-top: 106px;
       padding-bottom: 92px;
     }
@@ -5691,5 +5701,93 @@ page-404__title::after {
 
     .section {
       padding-top: 4.1rem;
+    }
+
+    /* catalog page */
+    .card-list__item {
+      width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .catalog__menu,
+    .filter,
+    .sort-catalog {
+        display: none;
+    }
+
+    .catalog__sidebar {
+        order: 2;
+    }
+
+    .catalog__sidebar,
+    .catalog__products-list {
+        width: 100%;
+    }
+
+    .catalog {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .pagination__page-first,
+    .pagination__page-last {
+        display: none;
+    }
+
+    .pagination__arrow {
+        background-color: #ffdd55;
+    }
+
+    .pagination__arrow:hover {
+        background-color: transparent;
+    }
+
+    .download-catalog {
+        padding: 0;
+        border: 0;
+        background: none;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .download-catalog svg {
+        display: none;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+
+    .button-download {
+        position: static;
+        transform: none;
+        left: auto;
+        top: auto;
+        width: auto;
+    }
+
+    .individual-order {
+        display: none;
+    }
+
+    .we-recommend {
+        display: none;
+    }
+
+    .news_catalog-page {
+        padding-top: 5.64rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .card-list__item {
+        width: 100%;
+        /* max-width: 340px; */
+    }
+
+    .card-list {
+        justify-content: center;
     }
 }
