@@ -5729,4 +5729,14 @@ page-404__title::after {
     .section {
       padding-top: 4.1rem;
     }
+
+    .form-footer-wrap {
+        padding: 30px 10px;
+        background-color: #fff;
+    }
+
+    .form-footer-section {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
 }
