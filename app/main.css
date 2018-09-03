@@ -5594,6 +5594,10 @@ page-404__title::after {
         margin-right: auto;
     }
 
+    .news-slider__img img {
+        margin: auto;
+    }
+
     .news-slider__item {
         perspective: none;
     }
