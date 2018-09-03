@@ -6033,4 +6033,10 @@ page-404__title::after {
     .custom-checkbox__text a {
         display: inline;
     }
+
+    .button-send {
+        width: 100%;
+        max-width: 200px;
+        padding-right: 1.25rem;
+    }
 }
