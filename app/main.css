@@ -6284,10 +6284,6 @@ page-404__title::after {
         margin-bottom: 0.14rem;
     }
 
-    .recommendations__img img {
-        min-width: 35%;
-    }
-
     .recommendations__price {
         font-size: 24px;
         font-weight: 900;
