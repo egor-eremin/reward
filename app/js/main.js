@@ -92,23 +92,23 @@ $(document).ready(function() {
     })();
 
     (function initNewsSlider() {
-        $('#init-news-slider').on('init', function(event, slick){
+        // D.R.Y.
+        function onNewsSliderInit(event, slick) {
             var countSlide = $('.news-slider .slick-dots li:last-child button').text();
             var activeSlide = $('.news-slider .slick-dots .slick-active button').text();
             $('.news-slide-number__count').text(countSlide);
             $('.news-slide-number__this-slide').text(activeSlide);
-        });
-        $('#init-news-slider').on('afterChange', function(event, slick, currentSlide){
-            var countSlide = $('.news-slider .slick-dots li:last-child button').text();
-            var activeSlide = $('.news-slider .slick-dots .slick-active button').text();
-            $('.news-slide-number__count').text(countSlide);
-            $('.news-slide-number__this-slide').text(activeSlide);
-        });
+        }
+        $('#init-news-slider').on('init', onNewsSliderInit);
+        $('#init-news-slider').on('afterChange', onNewsSliderInit);
+
+        $('.news__show-all').prepend('<div class="news-button-wrapper"></div>')
         $('#init-news-slider').slick({
             slidesToShow: 2,
             slidesToScroll: 2,
             dots: true,
             arrows: true,
+            appendArrows: '.news-button-wrapper',
             prevArrow: '<button type="button" class="slick-prev news-slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="12" viewBox="0 0 34 12">\n' +
             '  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>\n' +
             '<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">\n' +
@@ -131,12 +131,22 @@ $(document).ready(function() {
             '</svg></button>',
             responsive: [
                 {
-                    breakpoint: 767,
-                    settings: "unslick"
+                    breakpoint: 1024,
+                    settings: {
+                        centerMode: false,
+                        adaptiveHeight: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 }
             ]
         });
-        $('.news-slider .slick-arrow').wrapAll('<div class="news-button-wrapper"></div>');
         $('.news-slide-number').appendTo('.news-button-wrapper');
     })();
     (function addModalCalbackForm() {
@@ -835,6 +845,18 @@ function media(mediaQueryString, action){
 //     })(jQuery);
 // });
 
+
+// toggle search
+$('.search-toggle').click(function(){
+    $('.search').toggleClass('search_active')
+    $(this).toggleClass('search-toggle--close')
+});
+
+$('.search__input').on('focus', function () {
+    $(this).closest('.search').addClass('search_active')
+    $('.search-toggle').addClass('search-toggle--close')
+})
+
 // drilldown menu
 
 $(document).foundation();
@@ -851,15 +873,3 @@ $('.nav-back').each(function(){
   var backTxt = $(this).parent().closest('.is-drilldown-submenu-parent').find('> a').text();
   $(this).text(backTxt);
 });
-
-// toggle search
-
-$('.search-toggle').click(function(){
-    $('.search').toggleClass('search_active')
-    $(this).toggleClass('search-toggle--close')
-});
-
-$('.search__input').on('focus', function () {
-    $(this).closest('.search').addClass('search_active')
-    $('.search-toggle').addClass('search-toggle--close')
-})
