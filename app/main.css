@@ -5887,7 +5887,8 @@ page-404__title::after {
     }
 
     .catalog__sidebar,
-    .catalog__products-list {
+    .catalog__products-list,
+    .catalog__product-info {
         width: 100%;
     }
 
@@ -5895,6 +5896,10 @@ page-404__title::after {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+    }
+
+    .catalog_inner {
+        margin-top: 0;
     }
 
     .pagination__page-first,
@@ -6000,6 +6005,14 @@ page-404__title::after {
     .personal-date {
         width: 100%;
         margin: 0 0 20px;
+    }
+
+    /* product card */
+    .card-block {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        display: grid;
     }
 }
 
