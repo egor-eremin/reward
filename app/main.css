@@ -4766,6 +4766,9 @@ page-404__title::after {
     .button_enter {
         width: 166px;
     }
+    .button-send {
+        padding-right: 4.25rem;
+    }
 }
 
 /* @media (min-width: 768px) and (max-width: 1023px) {
