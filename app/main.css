@@ -1810,8 +1810,8 @@ svg {
 }
 .custom-checkbox__checkbox::before {
     content: '';
-    width: 7px;
-    height: 7px;
+    width: 50%;
+    height: 50%;
     border-radius: 1px;
     background-color: #3e3e3e;
     position: absolute;
@@ -5953,6 +5953,37 @@ page-404__title::after {
         margin-top: 44px;
         line-height: 1.74;
     }
+
+    /* Modal callback */
+    .button_close {
+        font-size: 0;
+        padding: 0.6875rem;
+    }
+
+    .close-icon {
+        margin: 0;
+    }
+
+    .form-item-footer {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .personal-date {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .custom-checkbox__checkbox {
+        width: 28px;
+        height: 28px;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        vertical-align: middle;
+    }
 }
 
 @media (max-width: 520px) {
@@ -5975,5 +6006,14 @@ page-404__title::after {
 
     .news-slider {
         margin-bottom: 0;
+    }
+
+    /* Modal callback */
+    .modal-popup {
+        padding: 2rem 1rem;
+    }
+
+    .custom-checkbox__text a {
+        display: inline;
     }
 }
