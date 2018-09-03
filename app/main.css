@@ -5460,7 +5460,8 @@ page-404__title::after {
     .more-info {
       margin: 0 -2px;
       font-size: 1rem;
-      width: 33%;
+      max-width: 33%;
+      line-height: 1;
     }
 
     .range__title {
@@ -5566,7 +5567,7 @@ page-404__title::after {
         padding-top: 7.0625rem;
     }
     .news-slide-number {
-        display: none;
+        margin: 0 20px;
     }
 
     /* .news-slider {
@@ -5586,6 +5587,8 @@ page-404__title::after {
                 transform: none;
         margin-top: -30px;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .news-slider__item {
@@ -5666,13 +5669,16 @@ page-404__title::after {
       display: flex;
       justify-content: space-between;
       padding: 0;
+      -ms-align-items: center;
+      align-items: center;
     }
 
     .news-button-wrapper {
         margin: 0;
         order: 0;
         justify-content: center;
-        width: 33%;
+        max-width: 33%;
+        width: auto;
     }
 
     .news__show-all::before {
