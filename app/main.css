@@ -5463,7 +5463,7 @@ page-404__title::after {
     .more-info {
       margin: 0 -2px;
       font-size: 1rem;
-      max-width: 33%;
+      width: auto;
       line-height: 1;
     }
 
@@ -5688,6 +5688,7 @@ page-404__title::after {
         content: '';
         display: inline-flex;
         width: 33%;
+        max-width: 92px;
         position: relative;
     }
 

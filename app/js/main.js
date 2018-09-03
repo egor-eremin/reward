@@ -134,8 +134,7 @@ $(document).ready(function() {
                     breakpoint: 1024,
                     settings: {
                         centerMode: false,
-                        adaptiveHeight: true,
-                        dots: false
+                        adaptiveHeight: true
                     }
                 },
                 {
