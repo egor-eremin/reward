@@ -296,11 +296,33 @@ $(document).ready(function() {
         });
     })();
     (function initCardSlider() {
+        function setUpCardLayout() {
+            if (window.matchMedia('(max-width: 1024px)').matches) {
+                $('.card-block__gallery').prependTo('.card-block__description')
+                $('.card-block__title').prependTo('.card-block__description')
+            } else {
+                $('.card-block__gallery').prependTo('.card-block')
+            }
+        }
+        if ($('.card-block__gallery').length) {
+            setUpCardLayout()
+            $(window).on('resize', setUpCardLayout)
+        }
+
         $('#card-slider').slick({
             fade: true,
             arrows: false,
             infinite: false,
             asNavFor: '#card-prev-slider',
+            dotsClass: 'card-block__slider-dots',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        dots: true
+                    }
+                }
+            ]
         });
 
         $('#card-prev-slider').slick({
@@ -310,6 +332,12 @@ $(document).ready(function() {
             asNavFor: '#card-slider',
             prevArrow: '<button type="button" class="slick-prev"><img src="../images/arrow-prev.png" alt="arrow-left"></button>',
             nextArrow: '<button type="button" class="slick-next"><img src="../images/arrow-next.png" alt="arrow-right"></button>',
+            responsive: [
+                {
+                    responsive: 1024,
+                    settings: 'unslick'
+                }
+            ]
         });
     })();
     (function customizeInputNumber() {
