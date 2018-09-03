@@ -2928,7 +2928,6 @@ svg {
 .recommendations__img img {
     max-height: 100%;
     object-fit: contain;
-    font-family: 'object-fit: contain;';
 }
 .recommendations__img_big {
     height: 220px;
@@ -5883,7 +5882,8 @@ page-404__title::after {
     /* product card */
     .card-block__gallery {
         width: 100%;
-        margin: 0 auto;
+        margin: 32px auto 27px;
+        padding: 0;
     }
     .card-block__description {
         padding: 0;
@@ -5902,7 +5902,7 @@ page-404__title::after {
     }
 
     .card-block__main-slider {
-        margin: 46px 0 0;
+        margin: 0;
     }
 
     .card-block__slider-dots {
@@ -5912,7 +5912,7 @@ page-404__title::after {
         -ms-align-items: center;
         align-items: center;
         justify-content: center;
-        margin: 31px auto;
+        margin: 31px auto 0;
     }
 
     .card-block__slider-dots li {
@@ -5946,8 +5946,43 @@ page-404__title::after {
         width: 100%;
     }
 
+    .card-block__description-product {
+        margin-bottom: 5px;
+    }
+
     .card-block__description-product p {
         font-size: 1rem;
+        line-height: 1.3;
+    }
+
+    .characteristics__item {
+        margin-bottom: 13px;
+    }
+
+    .characteristics__item_color .characteristics__name {
+        -ms-align-self: flex-start;
+        align-self: flex-start;
+    }
+
+    .characteristics__value-color.active {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+
+    .characteristics__item_color .characteristics__value {
+        margin-left: 1.9rem;
+    }
+
+    .characteristics__value-color + .characteristics__value-color {
+        margin-left: 1.35rem;
+    }
+
+    .characteristics__value {
+        font-size: 1.14rem;
+    }
+
+    .characteristics {
+        margin-bottom: 21px;
     }
 
     .price-card {
@@ -5955,6 +5990,7 @@ page-404__title::after {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         justify-content: flex-end;
+        margin-bottom: 29px;
     }
 
     .price-card__label,
@@ -5963,17 +5999,26 @@ page-404__title::after {
         margin: 0;
     }
 
+    .price-card__label {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
     .how-to-get {
         display: inline-block;
         transform: none;
         max-width: 50%;
         margin: 5px 0 0;
+        margin-left: calc(50% + 2px);
     }
 
     .is-available {
         padding-left: 0;
         -ms-align-self: center;
         align-self: center;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 1.14rem;
     }
 
     .is-available::before {
@@ -5985,6 +6030,7 @@ page-404__title::after {
         border-color: #ffdd55;
         width: 100%;
         max-width: none;
+        font-size: 16px;
     }
 
     .useful-link {
@@ -5993,7 +6039,7 @@ page-404__title::after {
     }
 
     .useful-link a {
-        line-height: 2.14;
+        line-height: 2.5;
     }
 
     .quantity {
@@ -6022,12 +6068,19 @@ page-404__title::after {
 
     .recommendations__title {
         width: 100%;
+        line-height: 0.96;
+        padding-bottom: 0.7em;
     }
 
     .recommendations__vertical,
     .recommendations__horizontal {
         width: 100%;
         padding: 0;
+    }
+
+    .code-product {
+        font-size: 1.14rem;
+        line-height: 1.38;
     }
 }
 
@@ -6165,8 +6218,14 @@ page-404__title::after {
 
     /* product card */
     .card-block {
-        margin-left: -10px;
-        margin-right: -10px;
+        margin: 0 -10px;
+        padding: 22px 10px 26px;
+    }
+
+    .card-block__title {
+        font-size: 24px;
+        margin-left: 3px;
+        padding-bottom: 13px;
     }
 
     .description-cup {
@@ -6175,6 +6234,7 @@ page-404__title::after {
 
     .we-recommend_catalog {
         display: block;
+        padding-top: 3.5rem;
     }
 
     .recommendations__wrapper {
@@ -6192,13 +6252,14 @@ page-404__title::after {
         -ms-flex-direction: column;
         flex-direction: column;
         margin: 0;
+        padding: 16px 10px;
     }
 
 
     .recommendations__item {
-        padding-bottom: 50px;
-        margin-left: -15px;
-        margin-right: -15px;
+        padding-bottom: 48px;
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     .recommendations__item + .recommendations__item,
@@ -6208,14 +6269,36 @@ page-404__title::after {
 
     .recommendations__vendor-code {
         text-align: center;
+        font-size: 1.14rem;
     }
 
     .recommendations__name {
         font-weight: 500;
+        font-size: 1.71rem;
+        margin-top: 0.14rem;
+        margin-bottom: 0.79rem;
     }
 
     .recommendations__img {
-        min-height: 150px;
+        height: 187px;
+        margin-bottom: 0.14rem;
+    }
+
+    .recommendations__img img {
+        min-width: 35%;
+    }
+
+    .recommendations__price {
+        font-size: 24px;
+        font-weight: 900;
+    }
+
+    .quantity {
+        margin-top: 2rem;
+    }
+
+    .we-recommend_catalog .h2-title_for-card {
+        margin-bottom: 1.8rem;
     }
 }
 
