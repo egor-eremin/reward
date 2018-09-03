@@ -4878,7 +4878,10 @@ page-404__title::after {
     .menu-catalog_button:hover .catalog-burger__line:nth-child(2) {
         width: 21px;
     }
-    /* addre: ;ss bar */
+    .catalog-burger__line + .catalog-burger__line {
+        margin-top: 5px;
+    }
+    /* address bar */
     .address a {
       font-size: .85714rem;
     }
