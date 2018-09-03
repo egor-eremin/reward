@@ -108,6 +108,7 @@ $(document).ready(function() {
             slidesToScroll: 2,
             dots: true,
             arrows: true,
+            adaptiveHeight: false,
             appendArrows: '.news-button-wrapper',
             prevArrow: '<button type="button" class="slick-prev news-slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="12" viewBox="0 0 34 12">\n' +
             '  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>\n' +
@@ -133,7 +134,7 @@ $(document).ready(function() {
                 {
                     breakpoint: 1024,
                     settings: {
-                        centerMode: false,
+                        slidesToShow: 2,
                         adaptiveHeight: true
                     }
                 },
@@ -141,7 +142,8 @@ $(document).ready(function() {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        adaptiveHeight: true
                     }
                 }
             ]
