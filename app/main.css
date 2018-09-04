@@ -4694,6 +4694,63 @@ page-404__title::after {
 .main-logo_adaptive {
     flex-shrink: 0;
 }
+
+
+
+.addition-popup {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+    padding: 23px 30px 35px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.addition-popup__icon {
+    width: 98px;
+    height: 130px;
+}
+
+.addition-popup__close {
+    padding: 0.6875rem;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+}
+
+.addition-popup__close .close-icon {
+    margin: 0;
+}
+
+.addition-popup__tip {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.71em;
+    margin: 15px auto 20px;
+}
+
+.addition-popup__button {
+    width: 100%;
+}
+
+.addition-popup__button + .addition-popup__button {
+    margin-top: 13px;
+}
+
+.addition-popup__button_checkout {
+
+}
+
+
 @media (min-width: 1201px) {
 
 }

@@ -301,7 +301,7 @@ $(document).ready(function() {
         $('.comparison').on('click', function () {
             $(this).toggleClass('add-to-comparison');
         });
-    })();
+    }());
     (function initViewportChecker() {
         $('.individual-order__animate-img').viewportChecker({
             classToRemove: 'hidden',
