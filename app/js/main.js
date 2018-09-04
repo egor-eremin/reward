@@ -280,6 +280,19 @@ $(document).ready(function() {
     (function addCustomSortSelect() {
         CustomSelect('#custom-sort-select', 'Сортировать', '.sort-select-wrapper');
     })();
+    (function catalogLayout() {
+        function setUpCatalogLayout() {
+            if (window.matchMedia('(max-width: 1024px)').matches) {
+                $('.download-catalog').appendTo('.catalog__products-list')
+            } else {
+                $('.download-catalog').appendTo('.catalog__sidebar_filter')
+            }
+        }
+        if ($('.download-catalog').length) {
+            setUpCatalogLayout()
+            $(window).on('resize', setUpCatalogLayout)
+        }
+    })
     (function toggleClass() {
         $('.wish-list').on('click', function () {
           $(this).toggleClass('add-to-wish-list');

@@ -5865,7 +5865,7 @@ page-404__title::after {
         top: 81px;
     }
 
-    /* Modal callback */
+    .custom-radio__checkbox,
     .custom-checkbox__checkbox {
         width: 20px;
         height: 20px;
@@ -5873,6 +5873,11 @@ page-404__title::after {
         -ms-transform: none;
         transform: none;
         vertical-align: middle;
+    }
+
+    .custom-radio__checkbox::before {
+        width: 11px;
+        height: 11px;
     }
 
     /* product card */
@@ -6078,19 +6083,23 @@ page-404__title::after {
         line-height: 1.38;
     }
 
-    .catalog__menu,
-    .filter {
+    .catalog__menu {
         display: none;
+    }
+
+    .filter {
+        border-radius: 0;
+        margin: 0 -10px 50px;
+    }
+
+    .button_filter {
+        margin: auto;
     }
 
     .catalog {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-    }
-
-    .catalog__sidebar {
-        order: 2;
     }
 
     .catalog__sidebar,
