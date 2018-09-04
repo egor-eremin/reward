@@ -6007,9 +6007,8 @@ page-404__title::after {
     .how-to-get {
         display: inline-block;
         transform: none;
-        max-width: 50%;
+        width: 50%;
         margin: 5px 0 0;
-        margin-left: calc(50% + 2px);
     }
 
     .is-available {
