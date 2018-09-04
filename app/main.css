@@ -4746,11 +4746,6 @@ page-404__title::after {
     margin-top: 13px;
 }
 
-.addition-popup__button_checkout {
-
-}
-
-
 @media (min-width: 1201px) {
 
 }
@@ -6210,6 +6205,12 @@ page-404__title::after {
     }
 }
 
+@media (min-width: 992px) {
+    .orders__title {
+        display: none;
+    }
+}
+
 @media (max-width: 991px) {
     .card-list__item {
         width: 50%;
@@ -6221,6 +6222,10 @@ page-404__title::after {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+    }
+
+    .orders__title {
+        margin-bottom: 34px;
     }
 
     .orders__table,
@@ -6249,6 +6254,7 @@ page-404__title::after {
 
     .orders__total-title {
         font-size: 1.14rem;
+        margin-bottom: 13px;
     }
 
     .orders__button {
@@ -6258,7 +6264,29 @@ page-404__title::after {
     }
 
     .orders__button:first-of-type {
-        margin-top: 40px;
+        margin-top: 35px;
+    }
+
+    .orders__button + .orders__button {
+        margin-top: 15px;
+    }
+
+    .orders__button_one-click {
+        background-color: #0078ab;
+        color: #fff;
+    }
+
+    .orders__button_one-click:hover {
+        background-color: transparent;
+        color: #000;
+    }
+
+    .orders__button_one-click .one-click {
+        fill: #fff;
+    }
+
+    .orders__button_one-click:hover .one-click {
+        fill: #000;
     }
 }
 
@@ -6449,12 +6477,13 @@ page-404__title::after {
     .history__row {
         display: grid;
         grid-template-columns: 90px calc(100% - 90px);
-        padding: 30px 0;
+        padding: 26px 0 19px;
         position: relative;
+        border-top: 1px solid transparent;
     }
 
     .history__row + .history__row {
-        border-top: 1px solid #d4d7e2;
+        border-color: #d4d7e2;
     }
 
     .history td.history__cell_sum,
@@ -6483,7 +6512,7 @@ page-404__title::after {
     }
 
     .history td.history__cell_image img {
-        margin: auto;
+        margin: 0 auto;
     }
 
     .history td.history__cell_name {
@@ -6494,8 +6523,13 @@ page-404__title::after {
         grid-row: 2 / 3;
         grid-column: 2 / 3;
         font-weight: 700;
-        margin: 5px 0;
+        margin: 4px 0 11px;
     }
+
+    .quantity_table {
+        margin: 0;
+    }
+
     .history td.history__cell_quantity {
         grid-row: 3 / 4;
         grid-column: 2 / 3;
@@ -6507,6 +6541,24 @@ page-404__title::after {
         right: 0;
         top: 0;
         bottom: 0;
+    }
+
+    .close-row {
+        top: 78px;
+    }
+
+    .orders__total {
+        margin-top: 24px;
+        padding: 26px 17px 22px;
+    }
+
+    .we-recommend_basket,
+    .news_basket {
+        display: none;
+    }
+
+    .orders {
+        margin-bottom: 58px;
     }
 }
 
