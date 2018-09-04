@@ -6101,6 +6101,10 @@ page-404__title::after {
         width: 100%;
     }
 
+    .recommendations-horizontal-wrapper {
+        text-align: center;
+    }
+
     .catalog {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
@@ -6287,6 +6291,8 @@ page-404__title::after {
     .recommendations__price {
         font-size: 24px;
         font-weight: 900;
+        display: inline-block;
+        position: relative;
     }
 
     .quantity {
