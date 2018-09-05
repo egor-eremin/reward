@@ -3497,8 +3497,10 @@ svg {
     display: flex;
     justify-content: center;
 }
-.content-page_right-col {
-    padding-left: 3.5rem;
+@media (min-width: 768px) {
+    .content-page_right-col {
+        padding-left: 3.5rem;
+    }
 }
 .content-p {
     font-size: 0.875rem;
@@ -6323,6 +6325,65 @@ page-404__title::after {
     .personal-right-block {
         width: 100%;
     }
+
+    /* services 991px */
+    .content-page {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .services .left-col {
+        width: 100%;
+    }
+
+    .content-page_right-col {
+        max-width: 732px;
+        width: 100%;
+    }
+
+    .services__menu {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        width: auto;
+        justify-content: space-between;
+        margin: -5px -5px 40px;
+    }
+
+    .services__menu-item {
+        display: -webkit-inline-flex;
+        display: -ms-inline-flex;
+        display: inline-flex;
+        flex-grow: 1;
+        min-width: calc(100% / 3 - 10px);
+        width: auto;
+        margin: 5px;
+        height: auto;
+        position: relative;
+        padding: .83em 1.88em 0.46em 1.5em;
+        font-weight: 400;
+        font-size: 1.14rem;
+    }
+
+    .services__menu-item.active {
+        font-weight: 700;
+    }
+
+    .services__menu-item-svg {
+        width: 49px;
+        height: 49px;
+        margin-left: 5px;
+    }
+
+    .services__menu-item-svg svg {
+        max-width: 35px;
+        max-height: 26px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -6800,6 +6861,53 @@ page-404__title::after {
     .history-orders__mobile-block {
         padding: 50px 7px 0;
     }
+
+    /* Services 767px */
+    .services__prev-img {
+        margin-left: -11px;
+        margin-right: -11px;
+    }
+
+    .services__menu {
+        padding: 5px;
+    }
+
+    .services__menu-item {
+        margin: 0;
+        width: 100%;
+    }
+
+    .services__menu-item + .services__menu-item {
+        margin-top: 0.5rem;
+    }
+
+    .services__menu-item-svg {
+        margin-left: 60px;
+    }
+
+    .content-page__h1 {
+        font-size: 24.5px;
+    }
+
+    .services__prev-img {
+        margin-bottom: 1.2rem;
+    }
+
+    .attention-block {
+        margin-top: 16px;
+    }
+
+    .vacancies {
+        margin-bottom: 0;
+    }
+
+    .vacancies__element-item {
+        margin-bottom: 0;
+    }
+
+    .news_services {
+        padding-top: 4.8rem;
+    }
 }
 
 @media (max-width: 520px) {
@@ -6905,5 +7013,80 @@ page-404__title::after {
     .history-orders {
         width: auto;
         margin: 0px;
+    }
+
+    /* services 520px */
+    .two-column-text {
+        column-count: 1;
+    }
+
+    .demands-form__item:first-child,
+    .demands-form__item:nth-child(2) {
+        margin: 0;
+        width: 100%;
+    }
+
+    .demands-form {
+        display: none;
+    }
+
+    .button-show-vacancies {
+        font-size: 0;
+        padding: 5px;
+    }
+
+    .attention-block__icon {
+        margin-right: 10px;
+    }
+
+    .demands-form-title {
+        display: none;
+    }
+
+    .attention-block {
+        padding: 12px 12px 10px 11px;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+        border-radius: 5px;
+        font-size: 1rem;
+        line-height: 1.73;
+        margin-bottom: 43px;
+    }
+
+    .vacancies__element-item {
+        margin-top: 36px;
+    }
+
+    .content-page__wrapper p {
+        font-size: 1rem;
+        line-height: 1.29;
+    }
+
+    .attention-block__icon {
+        margin-top: 5px;
+    }
+
+    .attention-block__icon svg {
+        width: 40px;
+        height: 30px;
+    }
+
+    .vacancies__element-item-header {
+        padding: 11px 8px 10px 15px;
+    }
+
+    .vacancies__title-text {
+        font-size: 1.29rem;
+        font-weight: 400;
+        line-height: 1.22;
+    }
+
+    .button-show-vacancies .button-checkout-icon {
+        position: static;
+        top: auto;
+        right: auto;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
     }
 }
