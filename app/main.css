@@ -2419,7 +2419,11 @@ svg {
     font-weight: 500;
     padding: 10px 6px;
     border-radius: 10px;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+    color: #000 !important;
+    text-decoration: none !important;
 }
 .pagination__wrapper {
     margin-left: 21px;
@@ -3033,6 +3037,9 @@ svg {
         margin-right: 10px;
     }
     .history-orders__mobile-block {
+        display: none;
+    }
+    .pagination_articles {
         display: none;
     }
 }
@@ -3773,15 +3780,19 @@ svg {
     margin-top: 3.875rem;
 }
 
-.articles,
+/* .articles, */
 .contact {
     padding-left: 10px;
 }
 
 .articles-wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 100%;
+    margin: 0 -10px;
 }
 
 .articles__item {
@@ -3791,24 +3802,19 @@ svg {
     margin-bottom: 20px;
 }
 
-.articles__item_first,
-.articles__item_last,
-.articles__item_first .articles__content-wrapper,
-.articles__item_last .articles__content-wrapper,
 .form-contact,
 .address-contact__item,
 .address-contact {
     width: 50%;
 }
 
-.articles__item_first,
-.articles__item:nth-child(4) {
-    padding-left: 0px;
-}
-
-.articles__item_last,
-.articles__item:nth-child(3) {
-    padding-right: 0px;
+@media (min-width: 521px) {
+    .articles__item_first,
+    .articles__item_last,
+    .articles__item_first .articles__content-wrapper,
+    .articles__item_last .articles__content-wrapper {
+        width: 50%;
+    }
 }
 
 .articles__content-wrapper {
@@ -3828,14 +3834,16 @@ svg {
     overflow: hidden;
 }
 
-.articles__item_first .articles__img-wrapper,
-.articles__item_last .articles__img-wrapper {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
+@media (min-width: 521px) {
+    .articles__item_first .articles__img-wrapper,
+    .articles__item_last .articles__img-wrapper {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .image-articles {
@@ -6388,6 +6396,39 @@ page-404__title::after {
         max-width: 35px;
         max-height: 26px;
     }
+
+    /* articles list 991px */
+    .articles {
+        padding: 0 10px;
+        margin-top: 33px;
+    }
+
+    .articles__item {
+        width: calc(100% / 3);
+    }
+
+    .articles__item_first,
+    .articles__item_last {
+        width: calc(100% / 3 * 2);
+    }
+
+    .articles__heading {
+        margin-bottom: 22px;
+    }
+
+    .articles h3 {
+        font-size: 1rem;
+        margin: 2.85rem 0 1.4rem;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 521px) {
+    .articles__item_first .content-articles,
+    .articles__item_last .content-articles,
+    .articles__item_first .articles__content-wrapper,
+    .articles__item_last .articles__content-wrapper {
+        height: auto;
+    }
 }
 
 @media (max-width: 767px) {
@@ -6436,7 +6477,7 @@ page-404__title::after {
     }
 
     .pagination__number-item {
-      font-size: 16px;
+        font-size: 16px !important;
     }
 
     .pagination__number-list {
@@ -6912,6 +6953,25 @@ page-404__title::after {
     .news_services {
         padding-top: 4.8rem;
     }
+
+    /* articles list 767px */
+    .articles__item {
+        width: calc(100% / 2);
+    }
+
+    .articles__item_first,
+    .articles__item_last {
+        width: calc(100% / 2 * 2);
+    }
+
+    .we-recommend_articles-page {
+        display: block;
+        padding-top: 3.1rem;
+    }
+
+    .news_articles-page {
+        display: none;
+    }
 }
 
 @media (max-width: 520px) {
@@ -7096,5 +7156,43 @@ page-404__title::after {
         -webkit-transform: none;
         -ms-transform: none;
         transform: none;
+    }
+
+    /* articles list 520px */
+    .articles__item,
+    .articles__item_first,
+    .articles__item_last {
+        width: 100%;
+    }
+
+    .articles p {
+        font-size: 16px;
+        line-height: 1.38;
+    }
+
+    .content-articles {
+        height: auto;
+    }
+
+    .articles__content-wrapper {
+        height: 261px;
+    }
+
+    .articles__img-wrapper {
+        top: 261px;
+    }
+
+    .articles__content-wrapper hr {
+        margin-top: 2px;
+        margin-bottom: 24px;
+    }
+
+    .articles__item {
+        height: 477px;
+        margin-bottom: 15px;
+    }
+
+    .articles__content-wrapper .date-articles {
+        font-size: 1.14rem;
     }
 }
