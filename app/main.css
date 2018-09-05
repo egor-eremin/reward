@@ -6181,6 +6181,10 @@ page-404__title::after {
         padding-right: 15px;
     }
 
+    .button-registration {
+        padding-right: 4.25rem;
+    }
+
     .download-catalog svg {
         display: none;
     }
@@ -6837,6 +6841,10 @@ page-404__title::after {
         width: 100%;
         max-width: 200px;
         padding-right: 1.25rem;
+    }
+
+    .button-registration {
+        max-width: none;
     }
 
     .orders__total {
