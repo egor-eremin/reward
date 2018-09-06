@@ -6569,6 +6569,11 @@ page-404__title::after {
         width: 100%;
         height: auto;
     }
+
+    /* cooperation 991px */
+    .content-page_cooperation .left-col {
+        display: none;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 521px) {
@@ -7571,5 +7576,21 @@ page-404__title::after {
         padding-left: 50px;
         letter-spacing: -1px;
         line-height: 1.571428571428571;
+    }
+
+    /* cooperation 520px */
+    .content-page_cooperation {
+        margin-top: 50px;
+    }
+
+    .cooperation__wrapper {
+        width: auto;
+        margin: 0 -10px;
+    }
+
+    .cooperation-form__item {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
