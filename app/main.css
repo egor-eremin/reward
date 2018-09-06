@@ -6579,6 +6579,41 @@ page-404__title::after {
     .content-page_examples .left-col {
         display: none;
     }
+
+    .content-page_examples {
+        margin-top: 3.57rem;
+    }
+
+    /* events 991px */
+    .content-page_events {
+        margin-top: 3.57rem;
+    }
+
+    .content-page_events .left-col {
+        display: none;
+    }
+
+    .events-list__img {
+        width: calc(100% - 3rem);
+    }
+
+    .events {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+    }
+
+    .content-page_events .right-col {
+        width: 100%;
+        max-width: none;
+    }
+
+    .events .content-page__wrapper {
+        padding-right: 17px;
+        margin-right: 0;
+        max-width: 690px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 521px) {
@@ -6595,6 +6630,11 @@ page-404__title::after {
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
+    }
+
+    .events-list {
+        max-width: 670px;
+        width: 79.5%;
     }
 }
 
@@ -7188,6 +7228,31 @@ page-404__title::after {
     .text-footnote {
         width: 40%;
     }
+
+    /* events 767px */
+    .content-page__flex_events {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .text-footnote_events {
+        width: 100%;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+    }
+
+    .text-footnote_events .text-footnote__img {
+        width: 78px;
+        margin-right: 10px;
+    }
+
+    .text-footnote_events {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 520px) {
@@ -7616,5 +7681,34 @@ page-404__title::after {
         bottom: auto;
         left: auto;
         margin: 20px auto 0px;
+    }
+
+    /* events */
+    .events-list {
+        -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    }
+
+    .events-list__item {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .events-list__img {
+        width: calc(100% - 3.5em);
+        height: 200px;
+    }
+
+    @supports (object-fit: cover) {
+        .events-list__img img {
+            object-fit: cover;
+            height: 200px;
+        }
+    }
+
+    .events-list__text {
+        font-size: 1.14rem;
+        max-width: 85%;
     }
 }
