@@ -4721,17 +4721,20 @@ class="category-menu__quantity">55</span>
                     </ul>
                 </div>
                 <div class="article">
-                    <div class="article__img-prev">
-                        <img src="images/article-prev-img.jpg" alt="image-prev">
-                    </div>
-                    <h1 class="h1-title content-page__h1 underlining underlining_for-h1 underlining_blue">
-                        Новый год с чистого листа!<br>
-                        Дарим ежедневники за анкету
-                    </h1>
+                    <header class="article__header">
+                        <div class="article__img-prev">
+                            <img src="images/article-prev-img.jpg" alt="image-prev">
+                        </div>
+                        <h1 class="h1-title content-page__h1 underlining underlining_for-h1 underlining_blue" data-postdate="20.02.2018">
+                            Новый год с чистого листа!<br>
+                            Дарим ежедневники за анкету
+                        </h1>
+                    </header>
                     <div class="prev-text">
                         <div class="prev-text__text">
                             Как выбрать подарок
                         </div>
+                        <!-- NOTE: Дата дублируется в теге <h1> сверху, в атрибуте data-postdate -->
                         <div class="prev-text__date">
                             20.02.2018
                         </div>
@@ -4887,7 +4890,7 @@ class="category-menu__quantity">55</span>
                         На заказ
                     </div>
                 </div>
-                <section class="section we-recommend">
+                <section class="section we-recommend we-recommend_article-page">
                     <h2 class="h2-title h2-title_for-card underlining underlining_blue">
                         Мы рекомендуем
                     </h2>
@@ -5370,7 +5373,7 @@ class="category-menu__quantity">55</span>
                         </div>
                     </div>
                 </section>
-                <section class="section news news_small-margin">
+                <section class="section news news_article-page news_small-margin">
                     <h2 class="h2-title underlining underlining_blue">Новости и акции</h2>
                     <div class="news-slide-number">
                         <div class="news-slide-number__this-slide">
