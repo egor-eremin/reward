@@ -565,18 +565,15 @@ $(document).ready(function() {
 
 
     function initializationExamlesSlider() {
-        $('.examples-slider__main').on('init', function(event, slick){
+        function slidesCount(event, slick) {
             var countSlide = $('.examples-slider__main .slick-dots li:last-child button').text();
             var activeSlide = $('.examples-slider__main .slick-dots .slick-active button').text();
             $('.slide-quantity').text(countSlide);
             $('.slide-item').text(activeSlide);
-        });
-        $('.examples-slider__main').on('afterChange', function(event, slick, currentSlide){
-            var countSlide = $('.examples-slider__main .slick-dots li:last-child button').text();
-            var activeSlide = $('.examples-slider__main .slick-dots .slick-active button').text();
-            $('.slide-quantity').text(countSlide);
-            $('.slide-item').text(activeSlide);
-        });
+        }
+        $('.examples-slider__main').on('init', slidesCount);
+        $('.examples-slider__main').on('afterChange', slidesCount);
+
         $('.examples-slider__button-prev').click(function () {
             $('.examples-slider__prev .slick-prev').trigger('click');
         });
@@ -633,6 +630,20 @@ $(document).ready(function() {
             '  </defs>\n' +
             '  <path class="example-next" d="M1533.88,1082.36l9.23-8.86-9.23-8.86a2.7,2.7,0,0,1,1.97-4.64h0a2.862,2.862,0,0,1,1.97.78l11.36,10.9a2.5,2.5,0,0,1,0,3.63l-11.36,10.9a2.826,2.826,0,0,1-1.97.79h0A2.7,2.7,0,0,1,1533.88,1082.36Z" transform="translate(-1533.03 -1060)"/>\n' +
             '</svg></button>',
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
         });
         $('.examples-slider_slider-nav').appendTo('.examples-slider__main');
     }
