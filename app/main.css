@@ -6581,16 +6581,20 @@ page-404__title::after {
     }
 
     .content-page_examples {
-        margin-top: 3.57rem;
+        margin-top: 3.35rem;
     }
 
     /* events 991px */
     .content-page_events {
-        margin-top: 3.57rem;
+        margin-top: 3.35rem;
     }
 
     .content-page_events .left-col {
         display: none;
+    }
+
+    .events .content-page__h1 {
+        margin-bottom: 1.214285714285714rem;
     }
 
     .events-list__img {
@@ -6613,6 +6617,10 @@ page-404__title::after {
         margin-right: 0;
         max-width: 690px;
         width: 100%;
+    }
+
+    .events .content-page__wrapper p {
+        line-height: 1.714285714285714;
     }
 }
 
@@ -7246,12 +7254,23 @@ page-404__title::after {
     }
 
     .text-footnote_events .text-footnote__img {
-        width: 78px;
+        width: 110px;
         margin-right: 10px;
+    }
+
+    .text-footnote_events .text-footnote__text {
+        font-size: 1rem;
+        line-height: 1.571428571428571;
+        margin-top: -4px;
+        letter-spacing: -0.3px;
     }
 
     .text-footnote_events {
         margin-top: 0;
+    }
+
+    .events {
+        margin-bottom: 20px;
     }
 }
 
@@ -7683,7 +7702,11 @@ page-404__title::after {
         margin: 20px auto 0px;
     }
 
-    /* events */
+    /* events 520px */
+    .text-footnote_events {
+        margin-bottom: 2.93rem;
+    }
+
     .events-list {
         -webkit-flex-flow: column nowrap;
         -ms-flex-flow: column nowrap;
@@ -7692,12 +7715,18 @@ page-404__title::after {
 
     .events-list__item {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 62px;
+    }
+
+    .events-list__border {
+        width: calc(100% - 1.5rem);
     }
 
     .events-list__img {
         width: calc(100% - 3.5em);
         height: 200px;
+        top: 1.95rem;
+        left: calc(1.75rem + 16px);
     }
 
     @supports (object-fit: cover) {
@@ -7710,5 +7739,15 @@ page-404__title::after {
     .events-list__text {
         font-size: 1.14rem;
         max-width: 85%;
+        top: 3.64rem;
+        padding: 5px 11px 8px 4px;
+    }
+
+    .pagination_for-contate-page {
+        margin-top: 1.57rem;
+    }
+
+    .news_events-page {
+        margin-top: 1.65rem;
     }
 }
