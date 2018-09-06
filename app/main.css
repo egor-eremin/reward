@@ -6427,9 +6427,7 @@ page-404__title::after {
     }
 
     .article__img-prev {
-        margin-top: 0;
-        margin-left: -10px;
-        margin-right: -10px;
+        margin: 0 -10px;
         height: 330px;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -6463,16 +6461,24 @@ page-404__title::after {
 
     .article__header {
         position: relative;
+        margin-bottom: 29px;
+    }
+
+    .prev-text {
+        font-size: 1.14rem;
+        line-height: 1.38;
+        letter-spacing: -0.3px;
     }
 
     .article__header .content-page__h1 {
         position: absolute;
         margin: 0;
-        bottom: 50px;
+        bottom: 49px;
         font-weight: 900;
-        left: 8px;
+        left: 5px;
         font-size: 1.71rem;
         color: #000;
+        padding-bottom: 23px;
     }
 
     .article__header .content-page__h1::after {
@@ -6480,8 +6486,7 @@ page-404__title::after {
         display: block;
         position: absolute;
         bottom: -33px;
-        color: #000;
-        /* color: #8d8d8d; */
+        color: #8d8d8d;
         font-size: 1.14rem;
         line-height: 1.38;
         font-weight: 300;
@@ -6491,8 +6496,12 @@ page-404__title::after {
         display: none;
     }
 
+    .article .content-page {
+        margin-top: 24px;
+    }
+
     .article .content-page_right-col {
-        padding-left: 10px;
+        padding: 0 12px;
     }
 
     .content-page__wrapper p,
@@ -6515,6 +6524,10 @@ page-404__title::after {
 
     .important-information__quote-img svg {
         width: 90px;
+    }
+
+    .content-page__wrapper i {
+        line-height: inherit;
     }
 }
 
@@ -7082,6 +7095,7 @@ page-404__title::after {
 
     .we-recommend_article-page {
         display: block;
+        padding-top: 3.75rem;
     }
 
     .news_article-page {
@@ -7312,12 +7326,52 @@ page-404__title::after {
     }
 
     /* Article 520px */
-    .article .content-page__wrapper b {
-        line-height: 1.38;
+    .article__img-prev {
+        height: 402px;
     }
+
+    .article .content-page__wrapper {
+    }
+
+    .article .content-page__wrapper i {
+        line-height: inherit;
+    }
+
+    .article .content-page__wrapper p:first-child,
+    .article .content-page__wrapper p:nth-of-type(2),
+    .article .content-page__wrapper b {
+        line-height: 1.4;
+        padding: 0;
+    }
+
+    .article .content-page__wrapper p:first-child b,
+    .article .content-page__wrapper p:nth-of-type(2) b {
+        letter-spacing: -0.3px;
+    }
+
+    .article .content-page__wrapper p:nth-of-type(2) {
+        margin-bottom: 2em;
+    }
+
     .article .content-page__wrapper p {
         font-size: 1rem;
-        line-height: 1.71;
+        line-height: 1.72;
+        margin-bottom: 1.7rem;
+    }
+
+    .content-page__wrapper li {
+        padding-left: 52px;
+        line-height: 1.75;
+        margin: 0;
+    }
+
+    .content-page__wrapper ul {
+        margin-top: -0.29rem;
+        margin-bottom: 4.64rem;
+    }
+
+    .content-page__wrapper li::before {
+        left: 3px;
     }
 
     .important-information {
@@ -7325,15 +7379,25 @@ page-404__title::after {
         -ms-flex-direction: column;
         flex-direction: column;
         margin-top: 2.71rem;
+        margin-bottom: 5.57rem;
     }
 
     .important-information__img {
-        height: auto;
-        margin: 0 auto 45px;
+        width: 184px;
+        height: 184px;
+        margin: 0 auto 38px;
+        position: relative;
+    }
+
+    .important-information__img img {
+        border: 0;
+        display: block;
+        margin: auto;
     }
 
     .important-information__quote {
         padding: 0;
+        line-height: 1.26;
     }
 
     .important-information__text {
@@ -7345,7 +7409,7 @@ page-404__title::after {
     }
 
     .important-information__signature {
-        margin-top: 34px;
+        margin-top: 29px;
     }
 
     .important-information__author-name {
@@ -7357,5 +7421,6 @@ page-404__title::after {
         font-size: 1.14rem;
         font-weight: 700;
         font-style: italic;
+        margin-top: 1.36rem;
     }
 }
