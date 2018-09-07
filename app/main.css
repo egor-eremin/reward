@@ -7487,12 +7487,17 @@ page-404__title::after {
         display: none;
     }
 
+    .reviews .content-page__h1 {
+        margin-bottom: 1.93rem;
+    }
+
     .we-recommend_reviews {
         display: block;
     }
 
     .reviews__wrapper {
         margin-bottom: 80px;
+        padding-top: 0;
     }
 
     .reviews__item {
@@ -8128,7 +8133,7 @@ page-404__title::after {
     .reviews__item {
         display: block;
         padding: 0 0 30px;
-        margin-bottom: 30px;
+        margin-bottom: 34px;
     }
 
     .reviews__quote {
@@ -8145,15 +8150,26 @@ page-404__title::after {
         border: 3px solid #ffeb9c;
         display: block;
         float: left;
-        margin-right: 11px;
+        margin-right: 9px;
     }
 
     .reviews__title {
-        margin-top: 0.6em;
+        margin-top: 0.4em;
+        font-size: 1.714285714285714rem;
+    }
+
+    .reviews__quantity {
+        font-size: 1rem;
+        line-height: 1.571428571428571;
+        margin-top: -2px;
+        margin-bottom: 1rem;
     }
 
     .reviews__text {
         position: relative;
-        margin-top: 15px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0.1px;
     }
 }
