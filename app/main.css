@@ -6728,7 +6728,11 @@ page-404__title::after {
 
     /* vacancies 991px */
     .content-page_vacancies {
-        margin-top: 2.43rem;
+        margin-top: 2.13rem;
+    }
+
+    .content-page_vacancies .content-page__h1 {
+        margin-bottom: 1.4rem;
     }
 
     .content-page_vacancies .left-col {
@@ -6743,6 +6747,10 @@ page-404__title::after {
     .check-dots::after {
         width: 10px;
         height: 10px;
+    }
+
+    .vacancies__employment {
+        font-size: 1rem;
     }
 }
 
@@ -7449,6 +7457,21 @@ page-404__title::after {
         -ms-align-items: flex-start;
         align-items: flex-start;
     }
+
+    .we-recommend_vacancies-page {
+        display: block;
+        margin-top: -12px;
+    }
+
+    .news_vacancies {
+        display: none;
+    }
+
+    .vacancies__employment {
+        font-size: 1rem;
+        top: 3px;
+        position: relative;
+    }
 }
 
 @media (max-width: 520px) {
@@ -7617,7 +7640,7 @@ page-404__title::after {
     }
 
     .vacancies__element-item-header {
-        padding: 11px 8px 10px 15px;
+        padding: 0.86rem 0.64rem 0.64rem 1rem;
     }
 
     .vacancies__title-text {
@@ -7987,5 +8010,67 @@ page-404__title::after {
     /* vacancies 520px */
     .vacancies__element-item-body {
         margin: 0;
+    }
+
+    .vacancies__filter-block .vacancies__element-item {
+        margin: 15px 0;
+    }
+
+    .vacancies__element-item-body {
+        padding: 25px 10px 32px;
+    }
+
+    .vacancies__element-item-body p {
+        color: #404040;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.714285714285714;
+        margin-bottom: 0;
+        letter-spacing: -0.3px;
+    }
+
+    .vacancies__element-item-body p + p {
+        margin-top: 1.25rem;
+    }
+
+    .vacancies__element-item-body b {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .vacancies__element-item-body h3 {
+        margin: 0.9em 0 0.85em;
+        letter-spacing: 0.4px;
+    }
+
+    .vacancies__element-item-body ul {
+        margin-bottom: 33px;
+    }
+
+    .vacancies__element-item-body li {
+        padding-left: 50px;
+    }
+
+    .vacancies__element-item-body li::before {
+        left: 0;
+        width: 2.8rem;
+    }
+
+    .cooperation-form__item .form-input {
+        height: 4.25rem;
+    }
+
+    .cooperation-form__item:not(:last-child) {
+        margin-bottom: 3px;
+    }
+
+    .cooperation-form__footer {
+        margin-top: 11px;
+    }
+
+    .button_vacancies {
+        max-width: none;
+        margin-top: 0.79rem;
+        font-size: 1.14rem;
     }
 }
