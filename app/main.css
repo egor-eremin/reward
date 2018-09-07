@@ -6765,11 +6765,6 @@ page-404__title::after {
     .services__menu_cols_2 .services__menu-item {
         width: calc(100% / 2 - 10px);
     }
-
-    .button_big .button-checkout-icon {
-        width: 35px;
-        height: 35px;
-    }
 }
 
 @media (max-width: 991px) and (min-width: 521px) {
@@ -6778,6 +6773,11 @@ page-404__title::after {
     .articles__item_first .articles__content-wrapper,
     .articles__item_last .articles__content-wrapper {
         height: auto;
+    }
+
+    .button_big .button-checkout-icon {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -7544,6 +7544,27 @@ page-404__title::after {
 
     .vacancies__mobile-block {
         margin-top: 30px;
+    }
+
+    .content-page_help {
+        margin-top: 10px;
+    }
+
+    .content-page_help .right-col {
+        margin-top: 6px;
+    }
+
+    .content-page_help .content-page__h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .content-page_help .vacancies__element-item {
+        margin-top: 0;
+    }
+
+    .content-page_help .vacancies__element-title {
+        margin-right: 1.4rem;
     }
 }
 
