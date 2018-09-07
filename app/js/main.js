@@ -661,6 +661,8 @@ $(document).ready(function() {
             newTab.removeAttribute('tabindex');
             // Set the selected state
             newTab.setAttribute('aria-selected', 'true');
+            newTab.classList.add('active')
+            oldTab.classList.remove('active')
             oldTab.removeAttribute('aria-selected');
             oldTab.setAttribute('tabindex', '-1');
             // Get the indices of the new and old tabs to find the correct
