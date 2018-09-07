@@ -3036,10 +3036,9 @@ svg {
     .recommendations-horizontal-wrapper {
         margin-right: 10px;
     }
-    .history-orders__mobile-block {
-        display: none;
-    }
-    .pagination_articles {
+    .history-orders__mobile-block,
+    .pagination_articles,
+    .vacancies__mobile-block {
         display: none;
     }
 }
@@ -6761,6 +6760,16 @@ page-404__title::after {
     .content-page_contacts .left-col {
         display: none;
     }
+
+    /* help 991px */
+    .services__menu_cols_2 .services__menu-item {
+        width: calc(100% / 2 - 10px);
+    }
+
+    .button_big .button-checkout-icon {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 521px) {
@@ -7526,6 +7535,15 @@ page-404__title::after {
     .reviews__quote svg {
         width: 70px;
         height: 50px;
+    }
+
+    /* help 767px */
+    .services__menu_cols_2 .services__menu-item {
+        width: 100%;
+    }
+
+    .vacancies__mobile-block {
+        margin-top: 30px;
     }
 }
 
