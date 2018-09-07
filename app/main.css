@@ -6752,6 +6752,15 @@ page-404__title::after {
     .vacancies__employment {
         font-size: 1rem;
     }
+
+    /* reviews 991px */
+    .content-page_contacts {
+        margin-top: 2.13rem;
+    }
+
+    .content-page_contacts .left-col {
+        display: none;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 521px) {
@@ -7472,6 +7481,47 @@ page-404__title::after {
         top: 3px;
         position: relative;
     }
+
+    /* reviews 767px */
+    .news_reviews {
+        display: none;
+    }
+
+    .we-recommend_reviews {
+        display: block;
+    }
+
+    .reviews__wrapper {
+        margin-bottom: 80px;
+    }
+
+    .reviews__item {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .reviews__img {
+        width: 96px;
+        height: 96px;
+    }
+
+    .reviews__text-block {
+        padding-left: 1.5rem;
+    }
+
+    .reviews__title {
+        margin-bottom: 0;
+    }
+
+    .reviews__quote {
+        right: 4rem;
+        top: -1rem;
+    }
+
+    .reviews__quote svg {
+        width: 70px;
+        height: 50px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -8072,5 +8122,38 @@ page-404__title::after {
         max-width: none;
         margin-top: 0.79rem;
         font-size: 1.14rem;
+    }
+
+    /* reviews 520px */
+    .reviews__item {
+        display: block;
+        padding: 0 0 30px;
+        margin-bottom: 30px;
+    }
+
+    .reviews__quote {
+        display: none;
+    }
+
+    .reviews__text-block {
+        padding: .1px 0 0;
+    }
+
+    .reviews__img {
+        width: 60px;
+        height: 60px;
+        border: 3px solid #ffeb9c;
+        display: block;
+        float: left;
+        margin-right: 11px;
+    }
+
+    .reviews__title {
+        margin-top: 0.6em;
+    }
+
+    .reviews__text {
+        position: relative;
+        margin-top: 15px;
     }
 }
