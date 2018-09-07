@@ -6687,6 +6687,17 @@ page-404__title::after {
     .news_contact {
         display: none;
     }
+
+    .map__button {
+        margin-top: 20px;
+    }
+
+    .map__button > .button {
+        font-size: 1.14rem;
+        margin: 0 1px;
+        padding: 0.93rem 2.07rem 1rem 1.5rem;
+        letter-spacing: 0.1px;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 521px) {
@@ -7345,6 +7356,40 @@ page-404__title::after {
     .events {
         margin-bottom: 20px;
     }
+
+    .address-contact {
+        margin-top: 43px;
+    }
+
+    .address-contact__item h4 {
+        padding-left: 28%;
+        font-size: 1.14rem;
+        margin-top: 0;
+        letter-spacing: 0.2px;
+        margin-bottom: 29px;
+    }
+
+    .address-contact__item h4:before {
+        top: 0.8875rem;
+        left: -4px;
+        width: 24%;
+    }
+
+    .contact .address-mail,
+    .contact .address-phone,
+    .contact .address-hours,
+    .contact .address-description {
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .address-contact__item p:last-child {
+        margin-bottom: 0;
+    }
+
+    .address-contact__item + .address-contact__item {
+        margin-top: 44px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -7842,5 +7887,41 @@ page-404__title::after {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+    }
+
+    .contact {
+        margin-top: 8px;
+    }
+
+    .contact .h1-title {
+        display: none;
+    }
+
+    .contact-form__item .form-input {
+        height: 4.25rem;
+    }
+
+    .contact-form__item textarea.form-input {
+        height: auto;
+        min-height: 15.1rem;
+    }
+
+    .contact-form__item:not(:last-child) {
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-form__item .form-label {
+        margin-left: 2.5rem;
+        font-size: 0.85rem;
+        -webkit-transform: translateY(8px);
+        -ms-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    .button-send_contact {
+        margin-left: auto;
+        max-width: 190px;
+        font-size: 1.14rem;
+        padding-right: 2.85rem;
     }
 }
