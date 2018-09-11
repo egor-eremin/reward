@@ -4954,6 +4954,9 @@ page-404__title::after {
     .catalog-burger__line + .catalog-burger__line {
         margin-top: 5px;
     }
+    .menu-adaptive__wrap {
+        border-bottom: 1px solid #0078ab;
+    }
     /* address bar */
     .address a {
       font-size: .85714rem;
