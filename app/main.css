@@ -6191,6 +6191,7 @@ page-404__title::after {
         padding-right: 15px;
     }
 
+    .modal-form .button-send,
     .button-registration {
         padding-right: 4.25rem;
     }
