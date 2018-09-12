@@ -2374,6 +2374,8 @@ svg {
     background-color: #0078ab;
 }
 .card-list__order {
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     justify-content: center;
 }
@@ -2391,11 +2393,21 @@ svg {
     margin-right: 12px;
 }
 .pagination, .pagination__wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
+    -ms-align-items: center;
     align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .pagination__arrow {
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
+    -ms-align-items: center;
     align-items: center;
     justify-content: center;
     width: 40px;
@@ -7633,6 +7645,15 @@ page-404__title::after {
 
     .news-slider {
         margin-bottom: 0;
+    }
+
+    .pagination__number-item {
+        padding: 6px 8px;
+        border-radius: 15px;
+    }
+
+    .pagination__number-item + .pagination__number-item {
+        margin-left: 0px;
     }
 
     /* Modal callback */
