@@ -2115,6 +2115,7 @@ svg {
     top: 50%;
     right: 32px;
     transform: translateY(-50%);
+    color: #2d2d2d;
 }
 .custom-select .select2-container--open .select2-dropdown--below {
     border-radius: 0 0 19px 19px;
