@@ -4205,7 +4205,7 @@ svg {
     margin-right: 10px;
 }
 
-.contact-form textarea {
+.contact-form .form-textarea {
     height: 130px;
     resize: none;
 }
@@ -7571,7 +7571,7 @@ page-404__title::after {
     }
 
     .address-contact {
-        margin-top: 43px;
+        margin: 43px auto;
     }
 
     .address-contact__item h4 {
@@ -7598,10 +7598,6 @@ page-404__title::after {
 
     .address-contact__item p:last-child {
         margin-bottom: 0;
-    }
-
-    .address-contact__item + .address-contact__item {
-        margin-top: 44px;
     }
 
     /* vacancies 767px */
@@ -8233,7 +8229,7 @@ page-404__title::after {
         height: 4.25rem;
     }
 
-    .contact-form__item textarea.form-input {
+    .contact-form__item .form-textarea {
         height: auto;
         min-height: 15.1rem;
     }
@@ -8322,6 +8318,10 @@ page-404__title::after {
         max-width: none;
         margin-top: 0.79rem;
         font-size: 1.14rem;
+    }
+
+    .address-contact__item + .address-contact__item {
+        margin-top: 44px;
     }
 
     /* reviews 520px */
