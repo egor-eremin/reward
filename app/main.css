@@ -6230,9 +6230,11 @@ page-404__title::after {
         padding-right: 4.25rem;
     }
 
-    .download-catalog svg {
+    .button-download svg:not(.button-download__mobile-icon),
+    .download-catalog > svg {
         display: none;
     }
+
 
     .download-catalog .button-download__mobile-icon {
         display: inline-block;
@@ -7695,7 +7697,8 @@ page-404__title::after {
         padding-right: 1.25rem;
     }
 
-    .button-registration {
+    .button-registration,
+    .button-download {
         max-width: none;
     }
 
