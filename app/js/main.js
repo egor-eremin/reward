@@ -910,19 +910,23 @@ function media(mediaQueryString, action){
 // custom scrollbar on cards
 
 // media('all and (max-width: 767px)', function(){
-//     (function($){
-//       $(window).on("load",function(){
-//         $(".cards").mCustomScrollbar({
-//           axis:"x",
-//           theme:"rounded-dark",
-//           contentTouchScroll: 25,
-//           advanced:{
-//             autoExpandHorizontalScroll:true
-//           },
-//           mouseWheel:{ enable: false}
-//         });
-//       });
-//     })(jQuery);
+(function ($) {
+  $(window).on("load", function () {
+      if (window.matchMedia('all and (max-width: 767px)').matches) {
+          $(".cards").mCustomScrollbar({
+              axis: "x",
+              theme: "rounded-dark",
+              contentTouchScroll: 25,
+              advanced:{
+                  autoExpandHorizontalScroll:true
+              },
+              mouseWheel: {
+                  enable: true
+              }
+          })
+      }
+  })
+})(jQuery)
 // });
 
 
