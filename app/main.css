@@ -5723,6 +5723,9 @@ page-404__title::after {
 
     .section.souvenir {
       padding-bottom: 40px;
+      background-image: linear-gradient(132deg, #fff 74.5%, #e7e9f2 74.5%);
+      background-size: 100%;
+      background-position: bottom;
     }
 
     .conditions__text,
