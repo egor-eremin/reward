@@ -6442,6 +6442,8 @@ page-404__title::after {
         margin-right: auto;
     }
 
+
+
     .orders__button:first-of-type {
         margin-top: 35px;
     }
@@ -7800,6 +7802,18 @@ page-404__title::after {
     .input-interval {
         flex-grow: 1;
         width: 80%;
+    }
+
+    .conditions__block_yellow {
+        min-height: 500px;
+    }
+
+    .conditions__block_yellow li {
+        font-weight: 500;
+    }
+
+    .section.souvenir {
+      background-image: linear-gradient(132deg, #fff 69%, #e7e9f2 69%);
     }
 
     /* Modal callback */
