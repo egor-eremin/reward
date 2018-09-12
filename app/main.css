@@ -2000,6 +2000,7 @@ svg {
     border: none;
     box-shadow: none;
     border-radius: 3px;
+    width: calc(100% - 6px);
 }
 .noUi-base {
     height: 6px;
@@ -7671,6 +7672,11 @@ page-404__title::after {
 
     .pagination__number-item + .pagination__number-item {
         margin-left: 0px;
+    }
+
+    .input-interval {
+        flex-grow: 1;
+        width: 80%;
     }
 
     /* Modal callback */
