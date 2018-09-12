@@ -726,8 +726,13 @@ $(document).ready(function() {
         $(main_selector).select2({
             placeholder: select_placeholder,
             allowClear: true,
-            dropdownParent:$(dr_parent),
+            dropdownParent: $(dr_parent),
         });
+        // Костыль, который предотвращает открытие дропдауна при клике на крестик
+        $(main_selector).on('select2:unselecting', function (event) {
+            event.preventDefault()
+            $(this).val(null).trigger('change')
+        })
     }
     function cnageTypeInput(thisSelector) {
         var thisInput = thisSelector.parent('.form-item').find('.form-input');
