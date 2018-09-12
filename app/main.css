@@ -6368,6 +6368,27 @@ page-404__title::after {
         margin-bottom: 17px;
     }
 
+    .individual-order {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .individual-order__text-block {
+        width: 56%;
+    }
+
+    .individual-order__animate-img {
+        left: .5rem;
+    }
+
+    .button-individual-order {
+        width: auto;
+        max-width: none;
+        display: inline-block;
+        min-width: auto;
+        padding: 0.875rem 2rem;
+    }
+
     /* basket page */
     .orders {
         -webkit-flex-direction: column;
