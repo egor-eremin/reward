@@ -1413,6 +1413,7 @@ svg {
     opacity: 0;
     visibility: hidden;
     transition: .5s ease-in-out .3s;
+    max-width: none;
 }
 .col-6 {
     width: 50%;
@@ -5551,9 +5552,10 @@ page-404__title::after {
         width: 10px;
         background-color: rgba(0,0,0,0.3);
         /*outline: 5px solid #000;*/
-        /*border: 5px solid #000;*/
-        /*border-radius: 90%;*/
-        overflow: show;
+        /* border: 5px solid #000; */
+        /* border-radius: 10px; */
+        overflow: visible;
+        box-sizing: content-box;
     }
 
     .cards .mCSB_container{
@@ -5657,10 +5659,11 @@ page-404__title::after {
     }
 
     .cup-background {
-        bottom: 0;
-        top: 39%;
+        bottom: 60px;
+        top: auto;
         left: 0;
-        max-height: 792px;
+        max-height: none;
+        transform: translateX(-50%);
     }
 
     .souvenir {
@@ -7753,6 +7756,11 @@ page-404__title::after {
     .content-page_help .vacancies__element-title {
         margin-right: 1.4rem;
     }
+
+    .cup-background {
+        top: auto;
+        bottom: 70px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -8398,5 +8406,17 @@ page-404__title::after {
         line-height: 24px;
         font-weight: 400;
         letter-spacing: 0.1px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cup-background {
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 353px) {
+    .cup-background {
+        bottom: 145px;
     }
 }
