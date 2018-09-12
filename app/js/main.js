@@ -44,6 +44,26 @@ $(document).ready(function() {
             interactive: true,
         });
     })();
+    (function addToCartFeedback () {
+        if ($('.addition-popup').length) {
+            // $('.button-order').magnificPopup({
+            //     items: {
+            //         src: '.addition-popup',
+            //         type: 'inline'
+            //     }
+            // })
+            $('.button_order-in-card').click(function () {
+                console.log('ping!');
+                $.magnificPopup.open({
+                    items: {
+                        src: '.addition-popup',
+                        type: 'inline'
+                    },
+                    closeMarkup: '<button class="button button_hover button_close addition-popup__close close-button"> <span class="close-icon"> <span class="close-icon__item"></span> <span class="close-icon__item"></span> </span> </button>'
+                })
+            })
+        }
+    })();
     (function fixedHeightOnCategoryCard() {
         if (window.matchMedia("(min-width: 1025px)").matches) {
             $('.cards__wrapper').each(function (i, e) {

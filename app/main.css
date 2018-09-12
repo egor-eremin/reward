@@ -4801,6 +4801,16 @@ page-404__title::after {
     font-weight: 500;
     line-height: 1.71em;
     margin: 15px auto 20px;
+    padding: 0 15px;
+}
+
+.addition-popup__tip a {
+    color: #05c;
+    text-decoration: underline;
+}
+
+.addition-popup__tip a:hover {
+    text-decoration: none;
 }
 
 .addition-popup__button {
@@ -4809,6 +4819,27 @@ page-404__title::after {
 
 .addition-popup__button + .addition-popup__button {
     margin-top: 13px;
+}
+
+.addition-popup__button {
+    border-width: 4px !important;
+}
+
+.addition-popup__button_checkout {
+    max-width: none !important;
+    font-size: 1.14rem !important;
+    background-color: transparent !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.addition-popup__button_checkout:hover {
+    background-color: #ffdd55 !important;
+}
+
+.addition-popup__button_checkout .button-checkout-icon,
+.addition-popup__button_checkout:hover .button-checkout-icon {
+    background-color: #ffdd55;
 }
 
 @media (min-width: 1201px) {
