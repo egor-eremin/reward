@@ -3006,8 +3006,11 @@ svg {
 .quantity-button_minus {
     font-size: 17px;
 }
-.quantity-button:hover, .quantity-button:active {
-    opacity: .7;
+.quantity-button:hover,
+.quantity-button:active {
+    /* opacity: .7; */
+    background-color: #303030;
+    color: #fff;
 }
 .quantity input {
     width: 100%;
