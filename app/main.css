@@ -3668,6 +3668,7 @@ svg {
     font-style: italic;
     line-height: 1.375;
     width: 100%;
+    color: #2d2d2d;
 }
 .content-page__right-column {
     width: calc(70% - 1.25rem);
@@ -6689,7 +6690,7 @@ page-404__title::after {
     }
 
     .text-footnote {
-        margin-bottom: auto;
+        margin-bottom: 2.14rem;
         margin-top: 6rem;
     }
 
