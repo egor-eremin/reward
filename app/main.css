@@ -2974,6 +2974,8 @@ svg {
     margin-bottom: 6px;
 }
 .quantity {
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     width: 144px;
     border: 2px solid #ffdd55;
@@ -2992,6 +2994,17 @@ svg {
     width: 45px;
     transition: .3s ease-in-out;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.quantity-button_plus {
+    font-size: 24px;
+    font-weight: 300;
+}
+.quantity-button_minus {
+    font-size: 17px;
 }
 .quantity-button:hover, .quantity-button:active {
     opacity: .7;
