@@ -3935,6 +3935,7 @@ svg {
     font-size: 1rem;
     line-height: 1.375rem;
     margin-bottom: 28px;
+    font-weight: 200;
 }
 .content-page__wrapper p {
     font-size: 0.875rem;
