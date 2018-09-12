@@ -753,6 +753,22 @@ $(document).ready(function() {
             event.preventDefault()
             $(this).val(null).trigger('change')
         })
+        // Костыль, который закрывает дропдаун при тапе пальцем вне селекта на iOS
+        $(main_selector).on('select2:open', function (ev) {
+            let selector = $(this)
+            $(document).on('touchend', function (event) {
+                let condition = !$(event.target).closest('.custom-select').find(main_selector).length
+                // console.log('this is', selector)
+                // console.log('event.target is', event.target)
+                // console.log(`selector is ${main_selector}`)
+                // console.log(`computed selector is ${main_selector.slice(1)}`)
+                // console.log(`condition is ${condition}`)
+                if (condition) {
+                    selector.select2('close')
+                    $(document).off('touchend')
+                }
+            })
+        })
     }
     function cnageTypeInput(thisSelector) {
         var thisInput = thisSelector.parent('.form-item').find('.form-input');
