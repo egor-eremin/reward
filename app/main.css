@@ -2688,15 +2688,24 @@ svg {
     cursor: pointer;
     transform: scale(1.1);
 }
-.characteristics__value-color + .characteristics__value-color {
+.characteristics__value-color ~ .characteristics__value-color {
     margin-left: 1.25rem;
 }
-.characteristics__value-color.active {
+
+.characteristics__value-color-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -5;
+}
+
+.characteristics__value-color.active,
+.characteristics__value-color-input:checked + .characteristics__value-color {
     width: 32px;
     height: 32px;
     position: relative;
 }
-.characteristics__value-color.active::before {
+.characteristics__value-color.active::before,
+.characteristics__value-color-input:checked + .characteristics__value-color::before {
     content: "";
     width: 24px;
     height: 24px;
@@ -6065,7 +6074,8 @@ page-404__title::after {
         align-self: flex-start;
     }
 
-    .characteristics__value-color.active {
+    .characteristics__value-color.active,
+    .characteristics__value-color-input:checked + .characteristics__value-color {
         margin-top: -10px;
         margin-bottom: -10px;
     }
