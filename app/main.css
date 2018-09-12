@@ -2732,7 +2732,7 @@ svg {
     font-size: 1.875rem;
     line-height: 0.73;
     font-weight: 700;
-    color: #2d2d2d;
+    color: #404040;
     margin-left: 14px;
 }
 .how-to-get {
@@ -6141,6 +6141,15 @@ page-404__title::after {
         width: 100%;
         max-width: none;
         font-size: 16px;
+    }
+
+    .button_hover {
+        background-color: #ffdd55;
+        border-color: #ffdd55;
+    }
+
+    .button_hover:hover {
+        background-color: transparent;
     }
 
     .useful-link {
