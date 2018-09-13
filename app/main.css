@@ -755,6 +755,10 @@ footer {
     justify-content: center;
     background-color: #0078ab;
     margin-right: 19px;
+    transition: .33s ease-in-out;
+}
+.social-network__item:hover {
+    opacity: .8;
 }
 svg {
     vertical-align: top;
