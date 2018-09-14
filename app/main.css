@@ -6941,7 +6941,12 @@ page-404__title::after {
         margin-top: 3.35rem;
     }
 
-
+    .custom-select .select2-container .select2-selection--single .select2-selection__clear {
+        font-size: 0 !important;
+        width: 12px;
+        height: 12px;
+        background: url('../images/Close_select.svg') no-repeat center / contain;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 521px) {
