@@ -44,6 +44,26 @@ $(document).ready(function() {
             interactive: true,
         });
     })();
+    (function addToCartFeedback () {
+        if ($('.addition-popup').length) {
+            // $('.button-order').magnificPopup({
+            //     items: {
+            //         src: '.addition-popup',
+            //         type: 'inline'
+            //     }
+            // })
+            $('.button_order-in-card').click(function () {
+                console.log('ping!');
+                $.magnificPopup.open({
+                    items: {
+                        src: '.addition-popup',
+                        type: 'inline'
+                    },
+                    closeMarkup: '<button class="button button_hover button_close addition-popup__close close-button"> <span class="close-icon"> <span class="close-icon__item"></span> <span class="close-icon__item"></span> </span> </button>'
+                })
+            })
+        }
+    })();
     (function fixedHeightOnCategoryCard() {
         if (window.matchMedia("(min-width: 1025px)").matches) {
             $('.cards__wrapper').each(function (i, e) {
@@ -108,6 +128,7 @@ $(document).ready(function() {
             slidesToScroll: 2,
             dots: true,
             arrows: true,
+            adaptiveHeight: false,
             appendArrows: '.news-button-wrapper',
             prevArrow: '<button type="button" class="slick-prev news-slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="12" viewBox="0 0 34 12">\n' +
             '  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>\n' +
@@ -133,16 +154,16 @@ $(document).ready(function() {
                 {
                     breakpoint: 1024,
                     settings: {
-                        centerMode: false,
-                        adaptiveHeight: true,
-                        dots: false
+                        slidesToShow: 2,
+                        adaptiveHeight: true
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        adaptiveHeight: true
                     }
                 }
             ]
@@ -279,6 +300,19 @@ $(document).ready(function() {
     (function addCustomSortSelect() {
         CustomSelect('#custom-sort-select', 'Сортировать', '.sort-select-wrapper');
     })();
+    (function catalogLayout() {
+        function setUpCatalogLayout() {
+            if (window.matchMedia('(max-width: 1024px)').matches) {
+                $('.download-catalog').appendTo('.catalog__products-list')
+            } else {
+                $('.download-catalog').appendTo('.catalog__sidebar_filter')
+            }
+        }
+        if ($('.download-catalog').length) {
+            setUpCatalogLayout()
+            $(window).on('resize', setUpCatalogLayout)
+        }
+    })
     (function toggleClass() {
         $('.wish-list').on('click', function () {
           $(this).toggleClass('add-to-wish-list');
@@ -287,7 +321,7 @@ $(document).ready(function() {
         $('.comparison').on('click', function () {
             $(this).toggleClass('add-to-comparison');
         });
-    })();
+    }());
     (function initViewportChecker() {
         $('.individual-order__animate-img').viewportChecker({
             classToRemove: 'hidden',
@@ -295,11 +329,33 @@ $(document).ready(function() {
         });
     })();
     (function initCardSlider() {
+        function setUpCardLayout() {
+            if (window.matchMedia('(max-width: 1024px)').matches) {
+                $('.card-block__gallery').prependTo('.card-block__description')
+                $('.card-block__title').prependTo('.card-block__description')
+            } else {
+                $('.card-block__gallery').prependTo('.card-block')
+            }
+        }
+        if ($('.card-block__gallery').length) {
+            setUpCardLayout()
+            $(window).on('resize', setUpCardLayout)
+        }
+
         $('#card-slider').slick({
             fade: true,
             arrows: false,
             infinite: false,
             asNavFor: '#card-prev-slider',
+            dotsClass: 'card-block__slider-dots',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        dots: true
+                    }
+                }
+            ]
         });
 
         $('#card-prev-slider').slick({
@@ -309,6 +365,12 @@ $(document).ready(function() {
             asNavFor: '#card-slider',
             prevArrow: '<button type="button" class="slick-prev"><img src="../images/arrow-prev.png" alt="arrow-left"></button>',
             nextArrow: '<button type="button" class="slick-next"><img src="../images/arrow-next.png" alt="arrow-right"></button>',
+            responsive: [
+                {
+                    responsive: 1024,
+                    settings: 'unslick'
+                }
+            ]
         });
     })();
     (function customizeInputNumber() {
@@ -523,18 +585,15 @@ $(document).ready(function() {
 
 
     function initializationExamlesSlider() {
-        $('.examples-slider__main').on('init', function(event, slick){
+        function slidesCount(event, slick) {
             var countSlide = $('.examples-slider__main .slick-dots li:last-child button').text();
             var activeSlide = $('.examples-slider__main .slick-dots .slick-active button').text();
             $('.slide-quantity').text(countSlide);
             $('.slide-item').text(activeSlide);
-        });
-        $('.examples-slider__main').on('afterChange', function(event, slick, currentSlide){
-            var countSlide = $('.examples-slider__main .slick-dots li:last-child button').text();
-            var activeSlide = $('.examples-slider__main .slick-dots .slick-active button').text();
-            $('.slide-quantity').text(countSlide);
-            $('.slide-item').text(activeSlide);
-        });
+        }
+        $('.examples-slider__main').on('init', slidesCount);
+        $('.examples-slider__main').on('afterChange', slidesCount);
+
         $('.examples-slider__button-prev').click(function () {
             $('.examples-slider__prev .slick-prev').trigger('click');
         });
@@ -591,6 +650,20 @@ $(document).ready(function() {
             '  </defs>\n' +
             '  <path class="example-next" d="M1533.88,1082.36l9.23-8.86-9.23-8.86a2.7,2.7,0,0,1,1.97-4.64h0a2.862,2.862,0,0,1,1.97.78l11.36,10.9a2.5,2.5,0,0,1,0,3.63l-11.36,10.9a2.826,2.826,0,0,1-1.97.79h0A2.7,2.7,0,0,1,1533.88,1082.36Z" transform="translate(-1533.03 -1060)"/>\n' +
             '</svg></button>',
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
         });
         $('.examples-slider_slider-nav').appendTo('.examples-slider__main');
     }
@@ -608,6 +681,8 @@ $(document).ready(function() {
             newTab.removeAttribute('tabindex');
             // Set the selected state
             newTab.setAttribute('aria-selected', 'true');
+            newTab.classList.add('active')
+            oldTab.classList.remove('active')
             oldTab.removeAttribute('aria-selected');
             oldTab.setAttribute('tabindex', '-1');
             // Get the indices of the new and old tabs to find the correct
@@ -671,8 +746,29 @@ $(document).ready(function() {
         $(main_selector).select2({
             placeholder: select_placeholder,
             allowClear: true,
-            dropdownParent:$(dr_parent),
+            dropdownParent: $(dr_parent),
         });
+        // Костыль, который предотвращает открытие дропдауна при клике на крестик
+        $(main_selector).on('select2:unselecting', function (event) {
+            event.preventDefault()
+            $(this).val(null).trigger('change')
+        })
+        // Костыль, который закрывает дропдаун при тапе пальцем вне селекта на iOS
+        $(main_selector).on('select2:open', function (ev) {
+            let selector = $(this)
+            $(document).on('touchend', function (event) {
+                let condition = !$(event.target).closest('.custom-select').find(main_selector).length
+                // console.log('this is', selector)
+                // console.log('event.target is', event.target)
+                // console.log(`selector is ${main_selector}`)
+                // console.log(`computed selector is ${main_selector.slice(1)}`)
+                // console.log(`condition is ${condition}`)
+                if (condition) {
+                    selector.select2('close')
+                    $(document).off('touchend')
+                }
+            })
+        })
     }
     function cnageTypeInput(thisSelector) {
         var thisInput = thisSelector.parent('.form-item').find('.form-input');
@@ -830,19 +926,23 @@ function media(mediaQueryString, action){
 // custom scrollbar on cards
 
 // media('all and (max-width: 767px)', function(){
-//     (function($){
-//       $(window).on("load",function(){
-//         $(".cards").mCustomScrollbar({
-//           axis:"x",
-//           theme:"rounded-dark",
-//           contentTouchScroll: 25,
-//           advanced:{
-//             autoExpandHorizontalScroll:true
-//           },
-//           mouseWheel:{ enable: false}
-//         });
-//       });
-//     })(jQuery);
+(function ($) {
+  $(window).on("load", function () {
+      if (window.matchMedia('all and (max-width: 767px)').matches) {
+          $(".cards").mCustomScrollbar({
+              axis: "x",
+              theme: "rounded-dark",
+              contentTouchScroll: 25,
+              advanced:{
+                  autoExpandHorizontalScroll:true
+              },
+              mouseWheel: {
+                  enable: true
+              }
+          })
+      }
+  })
+})(jQuery)
 // });
 
 
