@@ -796,6 +796,7 @@ $(document).ready(function() {
             doAnimationsInit($firstAnimatingElements);
             $('#initialization-slider .slick-arrow').wrapAll('<div class="template-wrapper wrapper-slick-arrow"></div>');
         });
+
         initSelector.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
             var $animatingElements = $(sliderItem + '[data-slick-index="' + currentSlide + '"]').find('[data-after-animation]');
             doAnimationsAfter($animatingElements);
@@ -805,8 +806,9 @@ $(document).ready(function() {
             var $animatingElements = $(sliderItem + '[data-slick-index="' + currentSlide + '"]').find('[data-animation]');
             doAnimations($animatingElements);
         });
+
         initSelector.slick({
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 5000,
             fade: true,
             infinite: true,
